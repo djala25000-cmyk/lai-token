@@ -1,4 +1,20 @@
-export async function onRequestPost(context) {
+export async function onRequest(context) {
+  // Gérer les requêtes OPTIONS (CORS preflight)
+  if (context.request.method === 'OPTIONS') {
+    return new Response(null, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type'
+      }
+    });
+  }
+
+  // Accepter uniquement POST
+  if (context.request.method !== 'POST') {
+    return new Response('Method Not Allowed', { status: 405 });
+  }
+
   try {
     const body = await context.request.json();
     const message = body.message;
@@ -31,7 +47,10 @@ export async function onRequestPost(context) {
     const reply = data?.choices?.[0]?.message?.content || 'Pas de reponse';
 
     return new Response(JSON.stringify({ reply }), {
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
     });
 
   } catch (err) {
@@ -40,14 +59,4 @@ export async function onRequestPost(context) {
       headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
     });
   }
-}
-
-export async function onRequestOptions() {
-  return new Response(null, {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    }
-  });
 }
