@@ -1,31 +1,15 @@
 export async function onRequest(context) {
-  // Gérer les requêtes OPTIONS (CORS preflight)
-  if (context.request.method === 'OPTIONS') {
-    return new Response(null, {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type'
-      }
-    });
-  }
-
-  // Accepter uniquement POST
-  if (context.request.method !== 'POST') {
-    return new Response('Method Not Allowed', { status: 405 });
-  }
+  const headers = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type'
+  };
 
   try {
     const body = await context.request.json();
-    const message = body.message;
+    const message = body.message || 'Hello';
     const apiKey = context.env.GROQ_API_KEY;
-
-    if (!apiKey) {
-      return new Response(JSON.stringify({ reply: 'Clé API manquante' }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
-      });
-    }
 
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
@@ -36,27 +20,19 @@ export async function onRequest(context) {
       body: JSON.stringify({
         model: 'llama-3.3-70b-versatile',
         messages: [
-          { role: 'system', content: 'Tu es l assistant de LEARN A.I $LAI sur Solana. Reponds de facon courte et amicale dans la langue de l utilisateur.' },
+          { role: 'system', content: 'Tu es l assistant de LEARN A.I $LAI. Reponds brievement dans la langue de l utilisateur.' },
           { role: 'user', content: message }
         ],
-        max_tokens: 500
+        max_tokens: 300
       })
     });
 
     const data = await response.json();
-    const reply = data?.choices?.[0]?.message?.content || 'Pas de reponse';
+    const reply = data?.choices?.[0]?.message?.content || JSON.stringify(data);
 
-    return new Response(JSON.stringify({ reply }), {
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      }
-    });
+    return new Response(JSON.stringify({ reply }), { headers });
 
   } catch (err) {
-    return new Response(JSON.stringify({ reply: 'Erreur: ' + err.message }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
-    });
+    return new Response(JSON.stringify({ reply: err.message }), { headers });
   }
 }
