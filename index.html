@@ -353,6 +353,12 @@
     .logo-ring { animation: rotateSlow 18s linear infinite; transform-origin: center; }
   </style>
 </head>
+  <script>
+document.getElementById('langSelect').addEventListener('change', function() {
+  setLang(this.value);
+  if (typeof startQuiz === 'function') startQuiz();
+});
+</script>
 <body>
 
 <svg width="0" height="0" style="position:absolute">
