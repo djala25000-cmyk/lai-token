@@ -1006,112 +1006,143 @@ window.addEventListener('load', function() {
 <script>
 var jargonDB = {
   "llm": {
-    term: "LLM — Large Language Model",
-    simple: "Un LLM est un programme informatique entraîné sur des milliards de textes pour comprendre et générer du langage humain. ChatGPT, Claude, Gemini sont tous des LLMs.",
-    analogy: "💡 Analogie : Imagine un étudiant qui a lu toutes les bibliothèques du monde. Il peut répondre à presque toutes tes questions car il a \"vu\" énormément d'exemples.",
-    example: "🔎 Exemples : GPT-4 (OpenAI), Claude (Anthropic), Llama (Meta), Gemini (Google)"
+    fr: { term: "LLM — Large Language Model", simple: "Un LLM est un programme informatique entraîné sur des milliards de textes pour comprendre et générer du langage humain. ChatGPT, Claude, Gemini sont tous des LLMs.", analogy: "💡 Analogie : Imagine un étudiant qui a lu toutes les bibliothèques du monde. Il peut répondre à presque toutes tes questions car il a \"vu\" énormément d'exemples.", example: "🔎 Exemples : GPT-4 (OpenAI), Claude (Anthropic), Llama (Meta), Gemini (Google)" },
+    en: { term: "LLM — Large Language Model", simple: "An LLM is a computer program trained on billions of texts to understand and generate human language. ChatGPT, Claude, and Gemini are all LLMs.", analogy: "💡 Analogy: Imagine a student who has read every library in the world — they can answer almost any question because they've seen countless examples.", example: "🔎 Examples: GPT-4 (OpenAI), Claude (Anthropic), Llama (Meta), Gemini (Google)" },
+    de: { term: "LLM — Großes Sprachmodell", simple: "Ein LLM ist ein Computerprogramm, das auf Milliarden von Texten trainiert wurde, um menschliche Sprache zu verstehen und zu erzeugen. ChatGPT, Claude und Gemini sind LLMs.", analogy: "💡 Analogie: Stell dir einen Studenten vor, der alle Bibliotheken der Welt gelesen hat.", example: "🔎 Beispiele: GPT-4 (OpenAI), Claude (Anthropic), Llama (Meta), Gemini (Google)" },
+    es: { term: "LLM — Modelo de Lenguaje Grande", simple: "Un LLM es un programa informático entrenado con miles de millones de textos para comprender y generar lenguaje humano. ChatGPT, Claude y Gemini son LLMs.", analogy: "💡 Analogía: Imagina un estudiante que ha leído todas las bibliotecas del mundo.", example: "🔎 Ejemplos: GPT-4 (OpenAI), Claude (Anthropic), Llama (Meta), Gemini (Google)" },
+    zh: { term: "LLM — 大型语言模型", simple: "LLM是一种在数十亿文本上训练的计算机程序，能够理解和生成人类语言。ChatGPT、Claude和Gemini都是LLM。", analogy: "💡 比喻：想象一个读过世界上所有图书馆的学生，他几乎能回答任何问题。", example: "🔎 示例：GPT-4（OpenAI）、Claude（Anthropic）、Llama（Meta）、Gemini（Google）" },
+    ar: { term: "LLM — نموذج لغوي كبير", simple: "نموذج LLM هو برنامج حاسوبي مُدرَّب على مليارات النصوص لفهم اللغة البشرية وتوليدها. ChatGPT وClaude وGemini كلها نماذج LLM.", analogy: "💡 تشبيه: تخيل طالباً قرأ جميع مكتبات العالم، يمكنه الإجابة على أي سؤال تقريباً.", example: "🔎 أمثلة: GPT-4 (OpenAI)، Claude (Anthropic)، Llama (Meta)، Gemini (Google)" }
   },
   "rag": {
-    term: "RAG — Retrieval Augmented Generation",
-    simple: "RAG est une technique qui permet à une IA de chercher des informations dans une base de données avant de répondre. Ça rend les réponses plus précises et à jour.",
-    analogy: "💡 Analogie : C'est comme si avant de répondre, l'IA ouvrait d'abord Google pour vérifier les infos, puis formulait sa réponse.",
-    example: "🔎 Utilisé par : ChatGPT avec navigation web, Perplexity AI, les chatbots d'entreprise"
+    fr: { term: "RAG — Retrieval Augmented Generation", simple: "RAG est une technique qui permet à une IA de chercher des informations dans une base de données avant de répondre. Ça rend les réponses plus précises et à jour.", analogy: "💡 Analogie : C'est comme si avant de répondre, l'IA ouvrait d'abord Google pour vérifier les infos, puis formulait sa réponse.", example: "🔎 Utilisé par : ChatGPT avec navigation web, Perplexity AI, les chatbots d'entreprise" },
+    en: { term: "RAG — Retrieval Augmented Generation", simple: "RAG is a technique that allows an AI to search a database before answering, making responses more accurate and up to date.", analogy: "💡 Analogy: It's like the AI opening Google to check facts before giving its answer.", example: "🔎 Used by: ChatGPT with web browsing, Perplexity AI, enterprise chatbots" },
+    de: { term: "RAG — Retrieval Augmented Generation", simple: "RAG ist eine Technik, die es einer KI ermöglicht, vor der Antwort in einer Datenbank zu suchen, um genauere und aktuellere Antworten zu geben.", analogy: "💡 Analogie: Als ob die KI vor der Antwort Google öffnet, um Fakten zu prüfen.", example: "🔎 Verwendet von: ChatGPT mit Websuche, Perplexity AI" },
+    es: { term: "RAG — Generación Aumentada por Recuperación", simple: "RAG es una técnica que permite a una IA buscar información antes de responder, haciendo las respuestas más precisas y actualizadas.", analogy: "💡 Analogía: Es como si la IA abriera Google para verificar los datos antes de responder.", example: "🔎 Usado por: ChatGPT con navegación web, Perplexity AI" },
+    zh: { term: "RAG — 检索增强生成", simple: "RAG是一种技术，允许AI在回答之前先搜索数据库，使回答更准确、更及时。", analogy: "💡 比喻：就像AI在回答前先打开谷歌查证信息一样。", example: "🔎 使用者：带网页浏览的ChatGPT、Perplexity AI" },
+    ar: { term: "RAG — التوليد المعزز بالاسترجاع", simple: "RAG تقنية تتيح للذكاء الاصطناعي البحث في قاعدة بيانات قبل الإجابة، مما يجعل الإجابات أكثر دقة وحداثة.", analogy: "💡 تشبيه: كأن الذكاء الاصطناعي يفتح جوجل للتحقق من المعلومات قبل الإجابة.", example: "🔎 مستخدم في: ChatGPT مع تصفح الويب، Perplexity AI" }
   },
   "gpu": {
-    term: "GPU — Graphics Processing Unit",
-    simple: "Un GPU est une puce électronique ultra-puissante capable de faire des millions de calculs en parallèle. Indispensable pour entraîner et faire tourner les IA.",
-    analogy: "💡 Analogie : Si le CPU (processeur) est un expert qui fait une chose à la fois très bien, le GPU est une armée de 1000 soldats qui font des choses simples en même temps.",
-    example: "🔎 Marques : NVIDIA (H100, A100), AMD, utilisés dans les datacenters IA"
+    fr: { term: "GPU — Graphics Processing Unit", simple: "Un GPU est une puce électronique ultra-puissante capable de faire des millions de calculs en parallèle. Indispensable pour entraîner et faire tourner les IA.", analogy: "💡 Analogie : Si le CPU est un expert qui fait une chose à la fois, le GPU est une armée de 1000 soldats qui font des choses simples en même temps.", example: "🔎 Marques : NVIDIA (H100, A100), AMD, utilisés dans les datacenters IA" },
+    en: { term: "GPU — Graphics Processing Unit", simple: "A GPU is an ultra-powerful chip capable of doing millions of calculations in parallel. Essential for training and running AI models.", analogy: "💡 Analogy: If the CPU is one expert doing tasks one at a time, the GPU is an army of 1000 soldiers doing simple tasks simultaneously.", example: "🔎 Brands: NVIDIA (H100, A100), AMD — used in AI data centers" },
+    de: { term: "GPU — Grafikprozessor", simple: "Eine GPU ist ein extrem leistungsstarker Chip, der Millionen von Berechnungen parallel durchführen kann. Unverzichtbar für KI-Training.", analogy: "💡 Analogie: Wenn die CPU ein Experte ist, der eine Sache nach der anderen macht, ist die GPU eine Armee von 1000 Soldaten.", example: "🔎 Marken: NVIDIA (H100, A100), AMD" },
+    es: { term: "GPU — Unidad de Procesamiento Gráfico", simple: "Una GPU es un chip ultra-potente capaz de realizar millones de cálculos en paralelo. Imprescindible para entrenar y ejecutar IA.", analogy: "💡 Analogía: Si la CPU es un experto que hace una cosa a la vez, la GPU es un ejército de 1000 soldados.", example: "🔎 Marcas: NVIDIA (H100, A100), AMD" },
+    zh: { term: "GPU — 图形处理器", simple: "GPU是一种超强芯片，能够并行进行数百万次计算，是训练和运行AI模型的必备工具。", analogy: "💡 比喻：CPU是一位专家每次做一件事；GPU则是1000名士兵同时做简单任务的军队。", example: "🔎 品牌：NVIDIA（H100、A100）、AMD" },
+    ar: { term: "GPU — وحدة معالجة الرسومات", simple: "GPU هي شريحة فائقة القوة قادرة على إجراء ملايين العمليات الحسابية في آنٍ واحد، وهي ضرورية لتدريب وتشغيل نماذج الذكاء الاصطناعي.", analogy: "💡 تشبيه: إذا كان المعالج CPU خبيراً يفعل شيئاً واحداً في كل مرة، فإن GPU هو جيش من 1000 جندي يؤدون مهاماً بسيطة في آنٍ واحد.", example: "🔎 العلامات التجارية: NVIDIA (H100, A100), AMD" }
   },
   "token": {
-    term: "Token (IA)",
-    simple: "En IA, un token est une unité de texte — environ 3/4 d'un mot. Les LLMs lisent et génèrent du texte token par token. Les limites de contexte sont mesurées en tokens.",
-    analogy: "💡 Analogie : Si le texte est un collier de perles, chaque perle est un token. L'IA traite perle par perle.",
-    example: "🔎 1000 tokens ≈ 750 mots. GPT-4 peut traiter jusqu'à 128 000 tokens à la fois."
+    fr: { term: "Token (IA)", simple: "En IA, un token est une unité de texte — environ 3/4 d'un mot. Les LLMs lisent et génèrent du texte token par token. Les limites de contexte sont mesurées en tokens.", analogy: "💡 Analogie : Si le texte est un collier de perles, chaque perle est un token. L'IA traite perle par perle.", example: "🔎 1000 tokens ≈ 750 mots. GPT-4 peut traiter jusqu'à 128 000 tokens à la fois." },
+    en: { term: "Token (AI)", simple: "In AI, a token is a unit of text — about 3/4 of a word. LLMs read and generate text token by token. Context limits are measured in tokens.", analogy: "💡 Analogy: If text is a necklace of beads, each bead is a token. The AI processes bead by bead.", example: "🔎 1000 tokens ≈ 750 words. GPT-4 can handle up to 128,000 tokens at once." },
+    de: { term: "Token (KI)", simple: "In der KI ist ein Token eine Texteinheit — etwa 3/4 eines Wortes. LLMs lesen und erzeugen Text Token für Token.", analogy: "💡 Analogie: Wenn Text eine Perlenkette ist, ist jede Perle ein Token.", example: "🔎 1000 Tokens ≈ 750 Wörter. GPT-4 kann bis zu 128.000 Tokens verarbeiten." },
+    es: { term: "Token (IA)", simple: "En IA, un token es una unidad de texto — aproximadamente 3/4 de una palabra. Los LLMs leen y generan texto token por token.", analogy: "💡 Analogía: Si el texto es un collar de perlas, cada perla es un token.", example: "🔎 1000 tokens ≈ 750 palabras. GPT-4 puede procesar hasta 128.000 tokens a la vez." },
+    zh: { term: "Token（AI）", simple: "在AI中，token是文本的基本单位——大约是3/4个单词。LLM逐token读取和生成文本，上下文限制以token计量。", analogy: "💡 比喻：如果文本是一串珠子，每颗珠子就是一个token，AI逐颗处理。", example: "🔎 1000 tokens ≈ 750个单词。GPT-4最多可处理128,000个token。" },
+    ar: { term: "Token (الذكاء الاصطناعي)", simple: "في الذكاء الاصطناعي، الـ Token هو وحدة نصية تساوي تقريباً 3/4 من كلمة. تقرأ نماذج LLM النصوص وتُنتجها token بـ token.", analogy: "💡 تشبيه: إذا كان النص عقداً من الخرز، فكل خرزة هي token.", example: "🔎 1000 token ≈ 750 كلمة. يمكن لـ GPT-4 معالجة حتى 128,000 token في المرة الواحدة." }
   },
   "fine-tuning": {
-    term: "Fine-tuning",
-    simple: "Le fine-tuning consiste à prendre un modèle IA déjà entraîné et à l'entraîner davantage sur des données spécifiques pour le spécialiser dans un domaine précis.",
-    analogy: "💡 Analogie : C'est comme prendre un médecin généraliste et lui faire suivre une spécialisation en cardiologie. Il garde ses connaissances générales mais devient expert dans un domaine.",
-    example: "🔎 Exemple : Fine-tuner GPT sur des textes juridiques pour créer un assistant avocat."
+    fr: { term: "Fine-tuning", simple: "Le fine-tuning consiste à prendre un modèle IA déjà entraîné et à l'entraîner davantage sur des données spécifiques pour le spécialiser dans un domaine précis.", analogy: "💡 Analogie : C'est comme prendre un médecin généraliste et lui faire suivre une spécialisation en cardiologie.", example: "🔎 Exemple : Fine-tuner GPT sur des textes juridiques pour créer un assistant avocat." },
+    en: { term: "Fine-tuning", simple: "Fine-tuning means taking an already trained AI model and training it further on specific data to specialize it in a precise domain.", analogy: "💡 Analogy: Like taking a general practitioner and giving them a cardiology specialization — they keep general knowledge but become expert in one area.", example: "🔎 Example: Fine-tuning GPT on legal texts to create a lawyer assistant." },
+    de: { term: "Fine-tuning (Feinabstimmung)", simple: "Fine-tuning bedeutet, ein bereits trainiertes KI-Modell mit spezifischen Daten weiter zu trainieren, um es für einen Bereich zu spezialisieren.", analogy: "💡 Analogie: Wie ein Allgemeinmediziner, der eine Kardiologie-Spezialisierung macht.", example: "🔎 Beispiel: GPT auf juristischen Texten trainieren, um einen Rechtsassistenten zu erstellen." },
+    es: { term: "Fine-tuning (Ajuste fino)", simple: "El fine-tuning consiste en tomar un modelo IA ya entrenado y entrenarlo más con datos específicos para especializarlo en un dominio concreto.", analogy: "💡 Analogía: Como tomar un médico de cabecera y darle una especialización en cardiología.", example: "🔎 Ejemplo: Hacer fine-tuning de GPT con textos jurídicos para crear un asistente legal." },
+    zh: { term: "Fine-tuning（微调）", simple: "微调是指取一个已训练好的AI模型，用特定数据对其进行进一步训练，使其专注于某一特定领域。", analogy: "💡 比喻：就像让全科医生接受心脏病学专科培训——保留通识知识，同时成为某领域专家。", example: "🔎 示例：用法律文本对GPT进行微调，创建法律助手。" },
+    ar: { term: "Fine-tuning (الضبط الدقيق)", simple: "الضبط الدقيق يعني أخذ نموذج ذكاء اصطناعي مُدرَّب مسبقاً وتدريبه مزيداً على بيانات محددة لتخصيصه في مجال معين.", analogy: "💡 تشبيه: كأخذ طبيب عام وتدريبه على تخصص في أمراض القلب — يحتفظ بمعرفته العامة لكنه يصبح خبيراً في مجال واحد.", example: "🔎 مثال: ضبط GPT دقيقاً على نصوص قانونية لإنشاء مساعد محامٍ." }
   },
   "hallucination": {
-    term: "Hallucination (IA)",
-    simple: "Une hallucination IA c'est quand l'IA invente des informations fausses mais les présente avec confiance comme si elles étaient vraies. C'est un problème majeur des LLMs.",
-    analogy: "💡 Analogie : Imagine quelqu'un qui ne sait pas la réponse à ta question mais qui invente une réponse très convaincante au lieu d'admettre son ignorance.",
-    example: "🔎 Exemple : Demander à une IA de citer des sources et elle invente des articles qui n'existent pas."
+    fr: { term: "Hallucination (IA)", simple: "Une hallucination IA c'est quand l'IA invente des informations fausses mais les présente avec confiance comme si elles étaient vraies. C'est un problème majeur des LLMs.", analogy: "💡 Analogie : Imagine quelqu'un qui ne sait pas la réponse mais invente une réponse très convaincante au lieu d'admettre son ignorance.", example: "🔎 Exemple : Demander à une IA de citer des sources et elle invente des articles qui n'existent pas." },
+    en: { term: "Hallucination (AI)", simple: "An AI hallucination is when the AI invents false information but presents it confidently as if it were true. It's a major problem with LLMs.", analogy: "💡 Analogy: Imagine someone who doesn't know the answer but invents a very convincing one instead of admitting they don't know.", example: "🔎 Example: Asking an AI to cite sources, and it invents articles that don't exist." },
+    de: { term: "Halluzination (KI)", simple: "Eine KI-Halluzination ist, wenn die KI falsche Informationen erfindet und sie selbstbewusst als wahr darstellt. Ein großes Problem bei LLMs.", analogy: "💡 Analogie: Jemand, der die Antwort nicht kennt, aber eine überzeugende erfindet.", example: "🔎 Beispiel: Die KI erfindet Quellen und Artikel, die nicht existieren." },
+    es: { term: "Alucinación (IA)", simple: "Una alucinación de IA es cuando la IA inventa información falsa pero la presenta con confianza como si fuera verdad.", analogy: "💡 Analogía: Alguien que no sabe la respuesta pero inventa una muy convincente.", example: "🔎 Ejemplo: Pedirle a una IA que cite fuentes e inventa artículos que no existen." },
+    zh: { term: "幻觉（AI）", simple: "AI幻觉是指AI凭空编造虚假信息，却以自信的方式呈现，好像是真的一样。这是LLM的重大问题。", analogy: "💡 比喻：想象一个不知道答案却自信编造答案的人，而不是承认自己不知道。", example: "🔎 示例：要求AI引用来源，它编造了根本不存在的文章。" },
+    ar: { term: "الهلوسة (الذكاء الاصطناعي)", simple: "هلوسة الذكاء الاصطناعي هي عندما يخترع الذكاء الاصطناعي معلومات خاطئة ويقدمها بثقة كأنها حقيقية. وهذه مشكلة كبيرة في نماذج LLM.", analogy: "💡 تشبيه: تخيل شخصاً لا يعرف الإجابة لكنه يخترع إجابة مقنعة جداً بدلاً من الاعتراف بجهله.", example: "🔎 مثال: طلب مصادر من الذكاء الاصطناعي فيخترع مقالات غير موجودة." }
   },
   "prompt": {
-    term: "Prompt",
-    simple: "Un prompt est l'instruction ou la question que tu donnes à une IA. La qualité du prompt détermine directement la qualité de la réponse. C'est tout l'art du prompt engineering.",
-    analogy: "💡 Analogie : C'est comme donner une consigne à un stagiaire. Plus ta consigne est précise et claire, meilleur sera le résultat.",
-    example: "🔎 Mauvais prompt : \"Parle-moi de l'IA\" | Bon prompt : \"Explique-moi le machine learning en 3 points simples avec des exemples concrets\""
+    fr: { term: "Prompt", simple: "Un prompt est l'instruction ou la question que tu donnes à une IA. La qualité du prompt détermine directement la qualité de la réponse. C'est tout l'art du prompt engineering.", analogy: "💡 Analogie : C'est comme donner une consigne à un stagiaire. Plus ta consigne est précise et claire, meilleur sera le résultat.", example: "🔎 Mauvais prompt : \"Parle-moi de l'IA\" | Bon prompt : \"Explique-moi le machine learning en 3 points simples avec des exemples concrets\"" },
+    en: { term: "Prompt", simple: "A prompt is the instruction or question you give to an AI. The quality of the prompt directly determines the quality of the response — that's the art of prompt engineering.", analogy: "💡 Analogy: It's like giving instructions to an intern. The clearer and more specific, the better the result.", example: "🔎 Bad: \"Tell me about AI\" | Good: \"Explain machine learning in 3 simple points with concrete examples\"" },
+    de: { term: "Prompt", simple: "Ein Prompt ist die Anweisung oder Frage, die du einer KI gibst. Die Qualität des Prompts bestimmt direkt die Qualität der Antwort.", analogy: "💡 Analogie: Wie eine Anweisung an einen Praktikanten — je klarer, desto besser das Ergebnis.", example: "🔎 Schlecht: \"Erzähl mir von KI\" | Gut: \"Erkläre Machine Learning in 3 einfachen Punkten mit Beispielen\"" },
+    es: { term: "Prompt", simple: "Un prompt es la instrucción o pregunta que le das a una IA. La calidad del prompt determina directamente la calidad de la respuesta.", analogy: "💡 Analogía: Como dar instrucciones a un pasante. Cuanto más claras, mejor el resultado.", example: "🔎 Malo: \"Háblame de IA\" | Bueno: \"Explícame el machine learning en 3 puntos simples\"" },
+    zh: { term: "Prompt（提示词）", simple: "Prompt是你给AI的指令或问题。提示词的质量直接决定回答的质量——这就是提示词工程的艺术。", analogy: "💡 比喻：就像给实习生布置任务，指令越清晰具体，结果越好。", example: "🔎 差：\"告诉我AI\" | 好：\"用3个简单要点和具体例子解释机器学习\"" },
+    ar: { term: "Prompt (النص التوجيهي)", simple: "الـ Prompt هو التعليمات أو السؤال الذي تعطيه للذكاء الاصطناعي. جودة الـ Prompt تحدد مباشرة جودة الإجابة.", analogy: "💡 تشبيه: كإعطاء تعليمات لمتدرب، كلما كانت التعليمات أوضح، كانت النتيجة أفضل.", example: "🔎 سيء: \"حدثني عن الذكاء الاصطناعي\" | جيد: \"اشرح التعلم الآلي في 3 نقاط بسيطة مع أمثلة\"" }
   },
   "neural network": {
-    term: "Neural Network — Réseau de Neurones",
-    simple: "Un réseau de neurones est un système informatique inspiré du cerveau humain. Il est composé de milliers de nœuds connectés qui apprennent à partir d'exemples.",
-    analogy: "💡 Analogie : Comme le cerveau humain avec ses neurones connectés, un réseau de neurones artificiel crée des connexions entre les données pour apprendre des patterns.",
-    example: "🔎 Utilisé pour : reconnaissance d'images, traduction, génération de texte, détection de fraude"
+    fr: { term: "Neural Network — Réseau de Neurones", simple: "Un réseau de neurones est un système informatique inspiré du cerveau humain. Il est composé de milliers de nœuds connectés qui apprennent à partir d'exemples.", analogy: "💡 Analogie : Comme le cerveau humain avec ses neurones connectés, un réseau de neurones artificiel crée des connexions entre les données pour apprendre des patterns.", example: "🔎 Utilisé pour : reconnaissance d'images, traduction, génération de texte, détection de fraude" },
+    en: { term: "Neural Network", simple: "A neural network is a computer system inspired by the human brain, made up of thousands of connected nodes that learn from examples.", analogy: "💡 Analogy: Like the human brain with connected neurons, an artificial neural network builds connections between data to learn patterns.", example: "🔎 Used for: image recognition, translation, text generation, fraud detection" },
+    de: { term: "Neuronales Netz", simple: "Ein neuronales Netz ist ein vom menschlichen Gehirn inspiriertes Computersystem aus Tausenden verbundener Knoten, die aus Beispielen lernen.", analogy: "💡 Analogie: Wie das menschliche Gehirn mit verbundenen Neuronen.", example: "🔎 Verwendet für: Bilderkennung, Übersetzung, Textgenerierung" },
+    es: { term: "Red Neuronal", simple: "Una red neuronal es un sistema informático inspirado en el cerebro humano, compuesto por miles de nodos conectados que aprenden de ejemplos.", analogy: "💡 Analogía: Como el cerebro humano con neuronas conectadas.", example: "🔎 Usado para: reconocimiento de imágenes, traducción, generación de texto" },
+    zh: { term: "神经网络", simple: "神经网络是受人类大脑启发的计算机系统，由数千个相连的节点组成，通过示例学习。", analogy: "💡 比喻：就像人类大脑中相连的神经元，人工神经网络在数据之间建立连接来学习模式。", example: "🔎 用于：图像识别、翻译、文本生成、欺诈检测" },
+    ar: { term: "الشبكة العصبية الاصطناعية", simple: "الشبكة العصبية هي نظام حاسوبي مستوحى من الدماغ البشري، يتكون من آلاف العُقَد المترابطة التي تتعلم من الأمثلة.", analogy: "💡 تشبيه: مثل الدماغ البشري بنيوراناته المترابطة، تبني الشبكة العصبية روابط بين البيانات لتتعلم الأنماط.", example: "🔎 تُستخدم في: التعرف على الصور، الترجمة، توليد النصوص، كشف الاحتيال" }
   },
   "blockchain": {
-    term: "Blockchain",
-    simple: "Une blockchain est une base de données décentralisée partagée entre des milliers d'ordinateurs. Chaque transaction est enregistrée dans un \"bloc\" lié aux précédents, impossible à modifier.",
-    analogy: "💡 Analogie : Imagine un cahier de comptes partagé avec tout le monde. Tout le monde peut le lire, personne ne peut effacer une ligne sans que ça se voie.",
-    example: "🔎 Exemples : Bitcoin, Ethereum, Solana (sur laquelle est $LAI !)"
+    fr: { term: "Blockchain", simple: "Une blockchain est une base de données décentralisée partagée entre des milliers d'ordinateurs. Chaque transaction est enregistrée dans un \"bloc\" lié aux précédents, impossible à modifier.", analogy: "💡 Analogie : Imagine un cahier de comptes partagé avec tout le monde. Tout le monde peut le lire, personne ne peut effacer une ligne sans que ça se voie.", example: "🔎 Exemples : Bitcoin, Ethereum, Solana (sur laquelle est $LAI !)" },
+    en: { term: "Blockchain", simple: "A blockchain is a decentralized database shared among thousands of computers. Each transaction is recorded in a 'block' linked to previous ones, making it impossible to alter.", analogy: "💡 Analogy: Imagine an accounting ledger shared with everyone. Anyone can read it, but no one can erase a line without it being noticed.", example: "🔎 Examples: Bitcoin, Ethereum, Solana (where $LAI lives!)" },
+    de: { term: "Blockchain", simple: "Eine Blockchain ist eine dezentrale Datenbank auf Tausenden von Computern. Jede Transaktion ist unveränderlich in einem Block gespeichert.", analogy: "💡 Analogie: Ein Buchhaltungsbuch, das alle teilen — niemand kann eine Zeile löschen.", example: "🔎 Beispiele: Bitcoin, Ethereum, Solana (auf der $LAI läuft!)" },
+    es: { term: "Blockchain", simple: "Una blockchain es una base de datos descentralizada compartida entre miles de ordenadores. Cada transacción queda registrada en un bloque imposible de modificar.", analogy: "💡 Analogía: Un libro de cuentas compartido con todos. Nadie puede borrar una línea sin que se note.", example: "🔎 Ejemplos: Bitcoin, Ethereum, Solana (¡donde vive $LAI!)" },
+    zh: { term: "区块链", simple: "区块链是在数千台计算机之间共享的去中心化数据库。每笔交易都记录在一个与前一个相连的"区块"中，无法篡改。", analogy: "💡 比喻：想象一个所有人共享的账本，任何人都可以阅读，但没有人能在不被发现的情况下删除任何一行。", example: "🔎 示例：比特币、以太坊、Solana（$LAI所在的链！）" },
+    ar: { term: "البلوكتشين (سلسلة الكتل)", simple: "البلوكتشين هي قاعدة بيانات لامركزية مشتركة بين آلاف الحواسيب. كل معاملة مسجلة في 'كتلة' مرتبطة بالكتل السابقة، ومستحيلة التعديل.", analogy: "💡 تشبيه: تخيل دفتر محاسبة مشتركاً مع الجميع، يمكن للجميع قراءته، لكن لا أحد يستطيع محو سطر دون أن يُلاحَظ.", example: "🔎 أمثلة: Bitcoin، Ethereum، Solana (التي يعيش عليها $LAI!)" }
   },
   "defi": {
-    term: "DeFi — Decentralized Finance",
-    simple: "La DeFi c'est la finance sans banque. Des protocoles informatiques remplacent les banques pour prêter, emprunter, échanger des cryptos de façon automatique et transparente.",
-    analogy: "💡 Analogie : Au lieu d'aller à la banque pour un prêt, tu interagis avec un programme informatique qui gère tout automatiquement, sans humain.",
-    example: "🔎 Protocoles : Uniswap, Aave, Raydium (Solana), Jupiter (Solana)"
+    fr: { term: "DeFi — Decentralized Finance", simple: "La DeFi c'est la finance sans banque. Des protocoles informatiques remplacent les banques pour prêter, emprunter, échanger des cryptos de façon automatique et transparente.", analogy: "💡 Analogie : Au lieu d'aller à la banque pour un prêt, tu interagis avec un programme informatique qui gère tout automatiquement, sans humain.", example: "🔎 Protocoles : Uniswap, Aave, Raydium (Solana), Jupiter (Solana)" },
+    en: { term: "DeFi — Decentralized Finance", simple: "DeFi is finance without a bank. Computer protocols replace banks to lend, borrow, and exchange crypto automatically and transparently.", analogy: "💡 Analogy: Instead of going to a bank for a loan, you interact with a computer program that manages everything automatically — no humans involved.", example: "🔎 Protocols: Uniswap, Aave, Raydium (Solana), Jupiter (Solana)" },
+    de: { term: "DeFi — Dezentralisierte Finanzen", simple: "DeFi ist Finanzen ohne Bank. Computerprotokolle ersetzen Banken für automatisches, transparentes Verleihen und Tauschen.", analogy: "💡 Analogie: Statt zur Bank für einen Kredit zu gehen, interagierst du mit einem Computerprogramm.", example: "🔎 Protokolle: Uniswap, Aave, Raydium (Solana), Jupiter (Solana)" },
+    es: { term: "DeFi — Finanzas Descentralizadas", simple: "DeFi es las finanzas sin banco. Protocolos informáticos reemplazan a los bancos para prestar e intercambiar criptos de forma automática.", analogy: "💡 Analogía: En lugar de ir al banco, interactúas con un programa informático que gestiona todo automáticamente.", example: "🔎 Protocolos: Uniswap, Aave, Raydium (Solana), Jupiter (Solana)" },
+    zh: { term: "DeFi — 去中心化金融", simple: "DeFi是没有银行的金融。计算机协议取代银行，自动透明地实现借贷和加密货币交换。", analogy: "💡 比喻：不用去银行贷款，而是与自动管理一切的计算机程序交互，无需人工参与。", example: "🔎 协议：Uniswap、Aave、Raydium（Solana）、Jupiter（Solana）" },
+    ar: { term: "DeFi — التمويل اللامركزي", simple: "DeFi هو التمويل بدون بنك. بروتوكولات حاسوبية تحل محل البنوك للإقراض والاقتراض وتبادل العملات المشفرة تلقائياً وبشفافية.", analogy: "💡 تشبيه: بدلاً من الذهاب إلى البنك، تتفاعل مع برنامج حاسوبي يدير كل شيء تلقائياً دون تدخل بشري.", example: "🔎 البروتوكولات: Uniswap، Aave، Raydium (Solana)، Jupiter (Solana)" }
   },
   "machine learning": {
-    term: "Machine Learning — Apprentissage Automatique",
-    simple: "Le machine learning est une branche de l'IA où les ordinateurs apprennent à partir de données sans être explicitement programmés. Ils trouvent des patterns et améliorent leurs performances.",
-    analogy: "💡 Analogie : Au lieu de dire à un enfant toutes les règles du jeu, tu lui montres des milliers d'exemples et il apprend tout seul les patterns.",
-    example: "🔎 Applications : spam detection, recommandations Netflix, reconnaissance faciale"
+    fr: { term: "Machine Learning — Apprentissage Automatique", simple: "Le machine learning est une branche de l'IA où les ordinateurs apprennent à partir de données sans être explicitement programmés. Ils trouvent des patterns et améliorent leurs performances.", analogy: "💡 Analogie : Au lieu de dire à un enfant toutes les règles du jeu, tu lui montres des milliers d'exemples et il apprend tout seul les patterns.", example: "🔎 Applications : spam detection, recommandations Netflix, reconnaissance faciale" },
+    en: { term: "Machine Learning", simple: "Machine learning is a branch of AI where computers learn from data without being explicitly programmed. They find patterns and improve their performance over time.", analogy: "💡 Analogy: Instead of telling a child all the rules of a game, you show them thousands of examples and they learn the patterns themselves.", example: "🔎 Applications: spam detection, Netflix recommendations, facial recognition" },
+    de: { term: "Maschinelles Lernen", simple: "Maschinelles Lernen ist ein KI-Bereich, in dem Computer aus Daten lernen, ohne explizit programmiert zu werden.", analogy: "💡 Analogie: Statt einem Kind alle Spielregeln zu erklären, zeigst du ihm Tausende Beispiele.", example: "🔎 Anwendungen: Spam-Erkennung, Netflix-Empfehlungen, Gesichtserkennung" },
+    es: { term: "Machine Learning — Aprendizaje Automático", simple: "El machine learning es una rama de la IA donde los ordenadores aprenden de datos sin ser explícitamente programados.", analogy: "💡 Analogía: En lugar de enseñar todas las reglas a un niño, le muestras miles de ejemplos.", example: "🔎 Aplicaciones: detección de spam, recomendaciones de Netflix, reconocimiento facial" },
+    zh: { term: "机器学习", simple: "机器学习是AI的一个分支，计算机无需明确编程即可从数据中学习，发现模式并随时间提高性能。", analogy: "💡 比喻：不告诉孩子游戏的所有规则，而是展示数千个例子，让他们自己学习模式。", example: "🔎 应用：垃圾邮件检测、Netflix推荐、人脸识别" },
+    ar: { term: "التعلم الآلي", simple: "التعلم الآلي هو فرع من الذكاء الاصطناعي حيث تتعلم الحواسيب من البيانات دون برمجة صريحة، تجد أنماطاً وتُحسِّن أداءها مع الوقت.", analogy: "💡 تشبيه: بدلاً من إخبار طفل بكل قواعد اللعبة، تُريه آلاف الأمثلة ويتعلم الأنماط بنفسه.", example: "🔎 تطبيقات: اكتشاف البريد العشوائي، توصيات Netflix، التعرف على الوجوه" }
   },
   "transformer": {
-    term: "Transformer",
-    simple: "Architecture révolutionnaire inventée par Google en 2017 qui est la base de tous les grands modèles de langage actuels (GPT, Claude, Gemini). Elle utilise un mécanisme d'\"attention\" pour comprendre le contexte.",
-    analogy: "💡 Analogie : Comme un lecteur humain qui surligne les mots importants dans un texte pour comprendre le sens global, le Transformer fait attention aux mots clés.",
-    example: "🔎 Article fondateur : \"Attention is All You Need\" (Google, 2017)"
+    fr: { term: "Transformer", simple: "Architecture révolutionnaire inventée par Google en 2017 qui est la base de tous les grands modèles de langage actuels (GPT, Claude, Gemini). Elle utilise un mécanisme d'\"attention\" pour comprendre le contexte.", analogy: "💡 Analogie : Comme un lecteur humain qui surligne les mots importants dans un texte, le Transformer fait attention aux mots clés.", example: "🔎 Article fondateur : \"Attention is All You Need\" (Google, 2017)" },
+    en: { term: "Transformer", simple: "A revolutionary architecture invented by Google in 2017, the foundation of all major language models today (GPT, Claude, Gemini). It uses an 'attention' mechanism to understand context.", analogy: "💡 Analogy: Like a human reader highlighting the important words in a text, the Transformer pays attention to key words to understand meaning.", example: "🔎 Founding paper: \"Attention is All You Need\" (Google, 2017)" },
+    de: { term: "Transformer", simple: "Eine revolutionäre Architektur von Google (2017), die die Grundlage aller großen Sprachmodelle ist. Sie verwendet einen 'Aufmerksamkeits'-Mechanismus.", analogy: "💡 Analogie: Wie ein Leser, der wichtige Wörter im Text hervorhebt.", example: "🔎 Grundlagenpaper: \"Attention is All You Need\" (Google, 2017)" },
+    es: { term: "Transformer", simple: "Arquitectura revolucionaria inventada por Google en 2017, base de todos los grandes modelos de lenguaje actuales. Usa un mecanismo de 'atención' para entender el contexto.", analogy: "💡 Analogía: Como un lector que subraya las palabras importantes.", example: "🔎 Paper fundacional: \"Attention is All You Need\" (Google, 2017)" },
+    zh: { term: "Transformer（变换器）", simple: "2017年谷歌发明的革命性架构，是当今所有主要语言模型（GPT、Claude、Gemini）的基础，使用'注意力'机制来理解上下文。", analogy: "💡 比喻：就像人类读者在文本中标出重要单词，Transformer关注关键词来理解含义。", example: "🔎 奠基论文：《Attention is All You Need》（谷歌，2017年）" },
+    ar: { term: "Transformer (المحوِّل)", simple: "بنية ثورية اخترعها جوجل عام 2017، وهي أساس جميع نماذج اللغة الكبيرة الحالية (GPT، Claude، Gemini). تستخدم آلية 'الانتباه' لفهم السياق.", analogy: "💡 تشبيه: كقارئ بشري يُسلِّط الضوء على الكلمات المهمة في نص لفهم المعنى الكلي.", example: "🔎 الورقة البحثية التأسيسية: 'Attention is All You Need' (جوجل، 2017)" }
   },
   "nft": {
-    term: "NFT — Non-Fungible Token",
-    simple: "Un NFT est un certificat de propriété numérique unique enregistré sur une blockchain. Il prouve que tu possèdes un fichier numérique spécifique (image, vidéo, etc.).",
-    analogy: "💡 Analogie : C'est comme un certificat d'authenticité pour une œuvre d'art, mais en numérique. La copie existe partout, mais le \"original certifié\" t'appartient.",
-    example: "🔎 Exemples : CryptoPunks, Bored Apes, art numérique sur Solana"
+    fr: { term: "NFT — Non-Fungible Token", simple: "Un NFT est un certificat de propriété numérique unique enregistré sur une blockchain. Il prouve que tu possèdes un fichier numérique spécifique (image, vidéo, etc.).", analogy: "💡 Analogie : C'est comme un certificat d'authenticité pour une œuvre d'art, mais en numérique. La copie existe partout, mais le \"original certifié\" t'appartient.", example: "🔎 Exemples : CryptoPunks, Bored Apes, art numérique sur Solana" },
+    en: { term: "NFT — Non-Fungible Token", simple: "An NFT is a unique digital ownership certificate recorded on a blockchain. It proves you own a specific digital file (image, video, etc.).", analogy: "💡 Analogy: It's like a certificate of authenticity for a piece of art, but digital. Copies exist everywhere, but the 'certified original' belongs to you.", example: "🔎 Examples: CryptoPunks, Bored Apes, digital art on Solana" },
+    de: { term: "NFT — Nicht-fungibles Token", simple: "Ein NFT ist ein einzigartiges digitales Eigentumszertifikat auf einer Blockchain. Es beweist, dass du eine bestimmte digitale Datei besitzt.", analogy: "💡 Analogie: Ein Echtheitszertifikat für ein Kunstwerk, aber digital.", example: "🔎 Beispiele: CryptoPunks, Bored Apes, digitale Kunst auf Solana" },
+    es: { term: "NFT — Token No Fungible", simple: "Un NFT es un certificado de propiedad digital único registrado en una blockchain. Prueba que posees un archivo digital específico.", analogy: "💡 Analogía: Como un certificado de autenticidad para una obra de arte, pero digital.", example: "🔎 Ejemplos: CryptoPunks, Bored Apes, arte digital en Solana" },
+    zh: { term: "NFT — 非同质化代币", simple: "NFT是记录在区块链上的唯一数字所有权证书，证明你拥有特定的数字文件（图片、视频等）。", analogy: "💡 比喻：就像艺术品的真品证书，但是数字化的。复制品到处都有，但'认证原件'属于你。", example: "🔎 示例：CryptoPunks、无聊猿、Solana上的数字艺术" },
+    ar: { term: "NFT — رمز غير قابل للاستبدال", simple: "NFT هو شهادة ملكية رقمية فريدة مسجلة على البلوكتشين، تثبت أنك تمتلك ملفاً رقمياً محدداً (صورة، فيديو، إلخ).", analogy: "💡 تشبيه: مثل شهادة أصالة لعمل فني، لكن رقمي. النسخ موجودة في كل مكان، لكن 'الأصل المعتمد' ملكك.", example: "🔎 أمثلة: CryptoPunks، Bored Apes، الفن الرقمي على Solana" }
   },
   "solana": {
-    term: "Solana",
-    simple: "Solana est une blockchain ultra-rapide capable de traiter 65 000 transactions par seconde avec des frais quasi-nuls. C'est la blockchain sur laquelle $LAI est déployé !",
-    analogy: "💡 Analogie : Si Bitcoin est un vélo et Ethereum une voiture, Solana est un avion supersonique.",
-    example: "🔎 $LAI est sur Solana ! Mint Address : FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5"
+    fr: { term: "Solana", simple: "Solana est une blockchain ultra-rapide capable de traiter 65 000 transactions par seconde avec des frais quasi-nuls. C'est la blockchain sur laquelle $LAI est déployé !", analogy: "💡 Analogie : Si Bitcoin est un vélo et Ethereum une voiture, Solana est un avion supersonique.", example: "🔎 $LAI est sur Solana ! Mint Address : FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5" },
+    en: { term: "Solana", simple: "Solana is an ultra-fast blockchain capable of processing 65,000 transactions per second with near-zero fees. It's the blockchain where $LAI is deployed!", analogy: "💡 Analogy: If Bitcoin is a bicycle and Ethereum a car, Solana is a supersonic jet.", example: "🔎 $LAI is on Solana! Mint Address: FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5" },
+    de: { term: "Solana", simple: "Solana ist eine ultraschnelle Blockchain mit 65.000 Transaktionen pro Sekunde und kaum Gebühren. Hier läuft $LAI!", analogy: "💡 Analogie: Wenn Bitcoin ein Fahrrad ist und Ethereum ein Auto, ist Solana ein Überschallflugzeug.", example: "🔎 $LAI läuft auf Solana! Mint Address: FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5" },
+    es: { term: "Solana", simple: "Solana es una blockchain ultra-rápida capaz de procesar 65.000 transacciones por segundo con comisiones casi nulas. ¡Es donde vive $LAI!", analogy: "💡 Analogía: Si Bitcoin es una bicicleta y Ethereum un coche, Solana es un avión supersónico.", example: "🔎 ¡$LAI está en Solana! Mint Address: FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5" },
+    zh: { term: "Solana", simple: "Solana是一条超高速区块链，每秒可处理65,000笔交易，费用几乎为零。这是$LAI部署的区块链！", analogy: "💡 比喻：如果比特币是自行车，以太坊是汽车，那么Solana就是超音速飞机。", example: "🔎 $LAI在Solana上！铸造地址：FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5" },
+    ar: { term: "سولانا (Solana)", simple: "Solana هي بلوكتشين فائقة السرعة قادرة على معالجة 65,000 معاملة في الثانية برسوم شبه معدومة. إنها البلوكتشين التي نُشر عليها $LAI!", analogy: "💡 تشبيه: إذا كانت Bitcoin دراجة هوائية وEthereum سيارة، فإن Solana طائرة تفوق سرعتها سرعة الصوت.", example: "🔎 $LAI على Solana! عنوان الإصدار: FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5" }
   },
   "wallet": {
-    term: "Wallet — Portefeuille Crypto",
-    simple: "Un wallet crypto est une application qui stocke tes clés cryptographiques pour accéder à tes cryptomonnaies. Il ne stocke pas les coins eux-mêmes, mais les clés pour y accéder.",
-    analogy: "💡 Analogie : Ce n'est pas un vrai portefeuille — c'est plutôt comme un trousseau de clés qui te donne accès à ton coffre-fort sur la blockchain.",
-    example: "🔎 Wallets populaires : Phantom (Solana), MetaMask (Ethereum), Ledger (hardware)"
+    fr: { term: "Wallet — Portefeuille Crypto", simple: "Un wallet crypto est une application qui stocke tes clés cryptographiques pour accéder à tes cryptomonnaies. Il ne stocke pas les coins eux-mêmes, mais les clés pour y accéder.", analogy: "💡 Analogie : Ce n'est pas un vrai portefeuille — c'est plutôt comme un trousseau de clés qui te donne accès à ton coffre-fort sur la blockchain.", example: "🔎 Wallets populaires : Phantom (Solana), MetaMask (Ethereum), Ledger (hardware)" },
+    en: { term: "Wallet — Crypto Wallet", simple: "A crypto wallet is an app that stores your cryptographic keys to access your cryptocurrencies. It doesn't store the coins themselves, just the keys to access them.", analogy: "💡 Analogy: It's not a real wallet — it's more like a keychain that gives you access to your safe on the blockchain.", example: "🔎 Popular wallets: Phantom (Solana), MetaMask (Ethereum), Ledger (hardware)" },
+    de: { term: "Wallet — Krypto-Geldbörse", simple: "Eine Krypto-Wallet ist eine App, die deine kryptografischen Schlüssel speichert, um auf deine Kryptowährungen zuzugreifen.", analogy: "💡 Analogie: Nicht wie eine echte Geldbörse — eher wie ein Schlüsselbund für deinen Tresor auf der Blockchain.", example: "🔎 Beliebte Wallets: Phantom (Solana), MetaMask (Ethereum), Ledger (Hardware)" },
+    es: { term: "Wallet — Monedero Cripto", simple: "Un wallet cripto es una aplicación que almacena tus claves criptográficas para acceder a tus criptomonedas.", analogy: "💡 Analogía: No es un monedero real — es como un llavero que te da acceso a tu caja fuerte en la blockchain.", example: "🔎 Wallets populares: Phantom (Solana), MetaMask (Ethereum), Ledger (hardware)" },
+    zh: { term: "Wallet（加密钱包）", simple: "加密钱包是存储你的密码学密钥以访问加密货币的应用程序。它不存储币本身，只存储访问它们的密钥。", analogy: "💡 比喻：这不是真正的钱包——更像是一串钥匙，让你能访问区块链上的保险箱。", example: "🔎 常用钱包：Phantom（Solana）、MetaMask（Ethereum）、Ledger（硬件）" },
+    ar: { term: "Wallet — المحفظة الرقمية", simple: "المحفظة الرقمية هي تطبيق يخزن مفاتيحك التشفيرية للوصول إلى عملاتك المشفرة. لا تخزن العملات نفسها، بل المفاتيح للوصول إليها.", analogy: "💡 تشبيه: ليست محفظة حقيقية — بل أشبه بحلقة مفاتيح تمنحك الوصول إلى خزنتك على البلوكتشين.", example: "🔎 محافظ شائعة: Phantom (Solana)، MetaMask (Ethereum)، Ledger (مادي)" }
   }
 };
 
 function translateJargon() {
   var input = document.getElementById('jargon-input').value.toLowerCase().trim();
-  var result = jargonDB[input];
+  var lang = (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+  var entry = jargonDB[input];
 
-  if (!result) {
-    // Cherche une correspondance partielle
+  if (!entry) {
     for (var key in jargonDB) {
       if (key.includes(input) || input.includes(key)) {
-        result = jargonDB[key];
+        entry = jargonDB[key];
         break;
       }
     }
   }
 
-  if (result) {
+  if (entry) {
+    var result = entry[lang] || entry['en'] || entry['fr'];
     document.getElementById('jargon-notfound').style.display = 'none';
     document.getElementById('jargon-result').style.display = 'block';
     document.getElementById('jargon-term').textContent = result.term;
@@ -1136,14 +1167,14 @@ function suggestJargon(val) {
 
 <!-- GÉNÉRATEUR DE PROMPT -->
 <div class="section" id="prompt-gen">
-  <h2 class="section-title">⚡ Générateur de Prompt IA</h2>
-  <p style="color:var(--muted);font-size:.82rem;margin-bottom:2rem;">Génère le prompt parfait pour n'importe quelle IA en quelques clics !</p>
+  <h2 class="section-title" id="pg-title">⚡ Générateur de Prompt IA</h2>
+  <p id="pg-subtitle" style="color:var(--muted);font-size:.82rem;margin-bottom:2rem;">Génère le prompt parfait pour n'importe quelle IA en quelques clics !</p>
 
   <div style="max-width:700px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
 
     <!-- Tâche -->
     <div>
-      <div style="color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">1. Je veux...</div>
+      <div class="pg-label" style="color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">1. Je veux...</div>
       <select id="pg-task" style="width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:.75rem 1rem;font-family:'Space Mono',monospace;font-size:.78rem;cursor:pointer;outline:none;" onchange="generatePrompt()">
         <option value="email">✉️ Écrire un email professionnel</option>
         <option value="code">💻 Créer du code</option>
@@ -1160,7 +1191,7 @@ function suggestJargon(val) {
 
     <!-- IA cible -->
     <div>
-      <div style="color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">2. Pour quelle IA ?</div>
+      <div class="pg-label" style="color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">2. Pour quelle IA ?</div>
       <select id="pg-ai" style="width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:.75rem 1rem;font-family:'Space Mono',monospace;font-size:.78rem;cursor:pointer;outline:none;" onchange="generatePrompt()">
         <option value="chatgpt">🤖 ChatGPT</option>
         <option value="claude">🎓 Claude</option>
@@ -1172,7 +1203,7 @@ function suggestJargon(val) {
 
     <!-- Niveau -->
     <div>
-      <div style="color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">3. Mon niveau</div>
+      <div class="pg-label" style="color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">3. Mon niveau</div>
       <select id="pg-level" style="width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:.75rem 1rem;font-family:'Space Mono',monospace;font-size:.78rem;cursor:pointer;outline:none;" onchange="generatePrompt()">
         <option value="beginner">🐣 Débutant</option>
         <option value="intermediate">📚 Intermédiaire</option>
@@ -1182,7 +1213,7 @@ function suggestJargon(val) {
 
     <!-- Langue de sortie -->
     <div>
-      <div style="color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">4. Langue de la réponse</div>
+      <div class="pg-label" style="color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">4. Langue de la réponse</div>
       <select id="pg-lang" style="width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);padding:.75rem 1rem;font-family:'Space Mono',monospace;font-size:.78rem;cursor:pointer;outline:none;" onchange="generatePrompt()">
         <option value="français">🇫🇷 Français</option>
         <option value="English">🇬🇧 English</option>
@@ -1199,93 +1230,303 @@ function suggestJargon(val) {
     <div style="color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">✅ Ton prompt généré :</div>
     <div id="pg-result" style="background:var(--surface);border:1px solid rgba(79,255,176,.3);border-radius:12px;padding:1.5rem;font-size:.82rem;line-height:1.7;min-height:120px;white-space:pre-wrap;"></div>
     <button onclick="copyPrompt()" id="pg-copy-btn" style="margin-top:1rem;background:rgba(79,255,176,.1);border:1px solid rgba(79,255,176,.25);color:var(--accent);padding:.6rem 1.4rem;border-radius:8px;font-family:'Space Mono',monospace;font-size:.75rem;cursor:pointer;transition:background .2s;" onmouseover="this.style.background='rgba(79,255,176,.2)'" onmouseout="this.style.background='rgba(79,255,176,.1)'">📋 Copier le prompt</button>
+
   </div>
 </div>
 
 <script>
 var prompts = {
-  email: {
-    beginner: "Tu es un expert en communication professionnelle.\nÉcris-moi un email formel pour [DESTINATAIRE] concernant [SUJET].\nLe ton doit être professionnel et concis. Maximum 200 mots.\nRéponds en {lang}.",
-    intermediate: "Tu es un expert en communication d'entreprise.\nRédige un email professionnel avec :\n- Objet : [OBJET DE L'EMAIL]\n- Destinataire : [NOM/POSTE]\n- Message principal : [CONTENU]\n- Appel à l'action clair\nAdapte le ton selon le contexte. Réponds en {lang}.",
-    expert: "En tant qu'expert en communication stratégique, rédige un email de [TYPE : négociation/partenariat/relance] pour [DESTINATAIRE].\nIntègre les techniques de persuasion, un hook d'accroche fort et un CTA précis.\nContexte : [CONTEXTE]. Réponds en {lang}."
+  fr: {
+    email: {
+      beginner: "Tu es un expert en communication professionnelle.\nÉcris-moi un email formel pour [DESTINATAIRE] concernant [SUJET].\nLe ton doit être professionnel et concis. Maximum 200 mots.\nRéponds en {lang}.",
+      intermediate: "Tu es un expert en communication d'entreprise.\nRédige un email professionnel avec :\n- Objet : [OBJET DE L'EMAIL]\n- Destinataire : [NOM/POSTE]\n- Message principal : [CONTENU]\n- Appel à l'action clair\nAdapte le ton selon le contexte. Réponds en {lang}.",
+      expert: "En tant qu'expert en communication stratégique, rédige un email de [TYPE : négociation/partenariat/relance] pour [DESTINATAIRE].\nIntègre les techniques de persuasion, un hook d'accroche fort et un CTA précis.\nContexte : [CONTEXTE]. Réponds en {lang}."
+    },
+    code: {
+      beginner: "Tu es un développeur pédagogue.\nExplique-moi comment créer [CE QUE JE VEUX CRÉER] en [LANGAGE].\nDonne-moi le code étape par étape avec des commentaires.\nJe suis débutant. Réponds en {lang}.",
+      intermediate: "Tu es un développeur senior.\nCrée un [TYPE DE CODE] en [LANGAGE] qui [FONCTIONNALITÉ].\nLe code doit être propre, commenté et suivre les bonnes pratiques.\nContexte : [CONTEXTE]. Réponds en {lang}.",
+      expert: "En tant qu'architecte logiciel, implémente [FONCTIONNALITÉ] en [LANGAGE] en utilisant [PATTERN/FRAMEWORK].\nOptimise pour la performance et la maintenabilité.\nInclude les tests unitaires. Contexte : [CONTEXTE]. Réponds en {lang}."
+    },
+    content: {
+      beginner: "Tu es un créateur de contenu.\nÉcris un post pour [PLATEFORME : Twitter/LinkedIn/Instagram] sur [SUJET].\nLe ton doit être simple et engageant. Maximum [NOMBRE] mots.\nRéponds en {lang}.",
+      intermediate: "Tu es un expert en marketing de contenu.\nCrée un [POST/ARTICLE/THREAD] sur [SUJET] pour [AUDIENCE CIBLE].\nInclus un hook accrocheur, 3 points clés et un CTA.\nTon : [PROFESSIONNEL/DÉCONTRACTÉ/INSPIRANT]. Réponds en {lang}.",
+      expert: "En tant que stratège de contenu, crée une campagne pour [SUJET] incluant :\n- 1 post long LinkedIn\n- 5 tweets pour un thread\n- 1 description Instagram\nCible : [AUDIENCE]. Objectif : [ENGAGEMENT/CONVERSION/NOTORIÉTÉ]. Réponds en {lang}."
+    },
+    analyze: {
+      beginner: "Analyse ce texte et explique-moi les points principaux de façon simple :\n[COLLE TON TEXTE ICI]\nDonne-moi un résumé en 3 points. Réponds en {lang}.",
+      intermediate: "Effectue une analyse approfondie de ce contenu :\n[CONTENU]\nIdentifie : les idées principales, les arguments, les points forts et faibles.\nStructure ta réponse clairement. Réponds en {lang}.",
+      expert: "Réalise une analyse critique et stratégique de [DOCUMENT/TEXTE] :\n[CONTENU]\nÉvalue : la logique argumentative, les biais potentiels, les implications stratégiques.\nFournis des recommandations actionnables. Réponds en {lang}."
+    },
+    translate: {
+      beginner: "Traduis ce texte en [LANGUE CIBLE] de façon simple et naturelle :\n[TEXTE À TRADUIRE]\nSi un mot est difficile, explique-le. Réponds en {lang}.",
+      intermediate: "Traduis ce texte en [LANGUE CIBLE] en préservant le ton et le style original :\n[TEXTE]\nAdapte les expressions culturelles si nécessaire. Réponds en {lang}.",
+      expert: "Réalise une traduction professionnelle de [LANGUE SOURCE] vers [LANGUE CIBLE] :\n[TEXTE]\nPreserve le registre linguistique, les nuances culturelles et le style.\nFournis des notes de traducteur si nécessaire. Réponds en {lang}."
+    },
+    summarize: {
+      beginner: "Résume ce contenu en 5 points simples et clairs :\n[CONTENU À RÉSUMER]\nUtilise des mots simples. Réponds en {lang}.",
+      intermediate: "Crée un résumé structuré de ce contenu :\n[CONTENU]\nFormat : Introduction (2 phrases), Points clés (5 bullets), Conclusion.\nRéponds en {lang}.",
+      expert: "Produis un executive summary de [DOCUMENT/RAPPORT] :\n[CONTENU]\nInclus : contexte, enjeux stratégiques, points critiques, recommandations.\nMaximum 300 mots. Réponds en {lang}."
+    },
+    idea: {
+      beginner: "Génère 10 idées créatives pour [SUJET/PROJET].\nLes idées doivent être simples et réalisables.\nExplique brièvement chaque idée. Réponds en {lang}.",
+      intermediate: "Brainstorme 15 idées innovantes pour [SUJET] en tenant compte de [CONTRAINTES].\nClassifie-les par : facilité de mise en œuvre et impact potentiel.\nRéponds en {lang}.",
+      expert: "Conduis un brainstorming stratégique sur [PROBLÈME/OPPORTUNITÉ] :\nUtilise la méthode SCAMPER.\nFournis 3 idées disruptives avec leur plan d'action. Réponds en {lang}."
+    },
+    learn: {
+      beginner: "Explique-moi [CONCEPT] comme si j'avais 10 ans.\nUtilise des exemples du quotidien et des analogies simples.\nÉvite le jargon technique. Réponds en {lang}.",
+      intermediate: "Explique [CONCEPT] avec :\n1. La définition claire\n2. Comment ça fonctionne\n3. Un exemple concret\n4. Les cas d'usage pratiques\nNiveau : intermédiaire. Réponds en {lang}.",
+      expert: "Fournis une explication experte de [CONCEPT] incluant :\n- Les fondements théoriques\n- Les mécanismes avancés\n- Les cas limites et exceptions\n- Les dernières avancées\n- Les ressources pour approfondir. Réponds en {lang}."
+    },
+    crypto: {
+      beginner: "Explique-moi [CONCEPT CRYPTO : blockchain/wallet/token/DeFi] de façon très simple.\nUtilise des analogies du quotidien.\nJe suis complètement débutant en crypto. Réponds en {lang}.",
+      intermediate: "Explique le fonctionnement de [CONCEPT CRYPTO] sur la blockchain Solana.\nInclus les aspects techniques et pratiques.\nComment puis-je l'utiliser concrètement ? Réponds en {lang}.",
+      expert: "Analyse [PROTOCOLE/TOKEN/MÉCANISME] dans l'écosystème Solana :\n- Architecture technique\n- Tokenomics et mécanismes économiques\n- Risques et opportunités\n- Comparaison avec alternatives. Réponds en {lang}."
+    },
+    ai: {
+      beginner: "Explique-moi [CONCEPT IA] de façon très simple.\nJe n'ai aucune connaissance technique.\nUtilise des exemples concrets de la vie quotidienne. Réponds en {lang}.",
+      intermediate: "Explique [CONCEPT IA] en détail :\n- Comment ça fonctionne\n- Quels sont les modèles principaux\n- Comment l'utiliser dans ma vie quotidienne\n- Les limites actuelles. Réponds en {lang}.",
+      expert: "Analyse en profondeur [CONCEPT/MODÈLE IA] :\n- Architecture et mécanismes techniques\n- Benchmark et comparaisons\n- Cas d'usage avancés\n- Tendances et recherches récentes\n- Implications éthiques. Réponds en {lang}."
+    }
   },
-  code: {
-    beginner: "Tu es un développeur pédagogue.\nExplique-moi comment créer [CE QUE JE VEUX CRÉER] en [LANGAGE].\nDonne-moi le code étape par étape avec des commentaires.\nJe suis débutant. Réponds en {lang}.",
-    intermediate: "Tu es un développeur senior.\nCrée un [TYPE DE CODE] en [LANGAGE] qui [FONCTIONNALITÉ].\nLe code doit être propre, commenté et suivre les bonnes pratiques.\nContexte : [CONTEXTE]. Réponds en {lang}.",
-    expert: "En tant qu'architecte logiciel, implémente [FONCTIONNALITÉ] en [LANGAGE] en utilisant [PATTERN/FRAMEWORK].\nOptimise pour la performance et la maintenabilité.\nInclude les tests unitaires. Contexte : [CONTEXTE]. Réponds en {lang}."
+  en: {
+    email: {
+      beginner: "You are an expert in professional communication.\nWrite a formal email for [RECIPIENT] about [SUBJECT].\nKeep it professional and concise. Maximum 200 words.\nReply in {lang}.",
+      intermediate: "You are a business communication expert.\nDraft a professional email with:\n- Subject: [EMAIL SUBJECT]\n- Recipient: [NAME/POSITION]\n- Main message: [CONTENT]\n- Clear call to action\nAdapt the tone to the context. Reply in {lang}.",
+      expert: "As a strategic communication expert, write a [TYPE: negotiation/partnership/follow-up] email for [RECIPIENT].\nApply persuasion techniques, a strong hook, and a precise CTA.\nContext: [CONTEXT]. Reply in {lang}."
+    },
+    code: {
+      beginner: "You are a teaching developer.\nExplain step by step how to create [WHAT I WANT TO BUILD] in [LANGUAGE].\nProvide the code with clear comments.\nI am a beginner. Reply in {lang}.",
+      intermediate: "You are a senior developer.\nCreate a [TYPE OF CODE] in [LANGUAGE] that [FEATURE].\nCode must be clean, commented, and follow best practices.\nContext: [CONTEXT]. Reply in {lang}.",
+      expert: "As a software architect, implement [FEATURE] in [LANGUAGE] using [PATTERN/FRAMEWORK].\nOptimize for performance and maintainability.\nInclude unit tests. Context: [CONTEXT]. Reply in {lang}."
+    },
+    content: {
+      beginner: "You are a content creator.\nWrite a post for [PLATFORM: Twitter/LinkedIn/Instagram] about [TOPIC].\nKeep it simple and engaging. Maximum [NUMBER] words.\nReply in {lang}.",
+      intermediate: "You are a content marketing expert.\nCreate a [POST/ARTICLE/THREAD] about [TOPIC] for [TARGET AUDIENCE].\nInclude a catchy hook, 3 key points, and a CTA.\nTone: [PROFESSIONAL/CASUAL/INSPIRING]. Reply in {lang}.",
+      expert: "As a content strategist, create a content campaign for [TOPIC] including:\n- 1 long LinkedIn post\n- 5 tweets for a thread\n- 1 Instagram caption\nTarget: [AUDIENCE]. Goal: [ENGAGEMENT/CONVERSION/AWARENESS]. Reply in {lang}."
+    },
+    analyze: {
+      beginner: "Analyze this text and explain the main points simply:\n[PASTE YOUR TEXT HERE]\nGive me a 3-point summary. Reply in {lang}.",
+      intermediate: "Perform a thorough analysis of this content:\n[CONTENT]\nIdentify: main ideas, arguments, strengths and weaknesses.\nStructure your response clearly. Reply in {lang}.",
+      expert: "Conduct a critical and strategic analysis of [DOCUMENT/TEXT]:\n[CONTENT]\nEvaluate: argumentative logic, potential biases, strategic implications.\nProvide actionable recommendations. Reply in {lang}."
+    },
+    translate: {
+      beginner: "Translate this text into [TARGET LANGUAGE] in a simple and natural way:\n[TEXT TO TRANSLATE]\nIf a word is difficult, explain it. Reply in {lang}.",
+      intermediate: "Translate this text into [TARGET LANGUAGE] while preserving the original tone and style:\n[TEXT]\nAdapt cultural expressions if necessary. Reply in {lang}.",
+      expert: "Produce a professional translation from [SOURCE LANGUAGE] to [TARGET LANGUAGE]:\n[TEXT]\nPreserve linguistic register, cultural nuances, and style.\nProvide translator's notes if necessary. Reply in {lang}."
+    },
+    summarize: {
+      beginner: "Summarize this content in 5 simple and clear points:\n[CONTENT TO SUMMARIZE]\nUse simple words. Reply in {lang}.",
+      intermediate: "Create a structured summary of this content:\n[CONTENT]\nFormat: Introduction (2 sentences), Key points (5 bullets), Conclusion.\nReply in {lang}.",
+      expert: "Produce an executive summary of [DOCUMENT/REPORT]:\n[CONTENT]\nInclude: context, strategic issues, critical points, recommendations.\nMaximum 300 words. Reply in {lang}."
+    },
+    idea: {
+      beginner: "Generate 10 creative ideas for [TOPIC/PROJECT].\nIdeas should be simple and achievable.\nBriefly explain each idea. Reply in {lang}.",
+      intermediate: "Brainstorm 15 innovative ideas for [TOPIC] considering [CONSTRAINTS].\nClassify them by: ease of implementation and potential impact.\nReply in {lang}.",
+      expert: "Conduct a strategic brainstorm on [PROBLEM/OPPORTUNITY]:\nUse the SCAMPER method.\nProvide 3 disruptive ideas with their action plan. Reply in {lang}."
+    },
+    learn: {
+      beginner: "Explain [CONCEPT] to me as if I were 10 years old.\nUse everyday examples and simple analogies.\nAvoid technical jargon. Reply in {lang}.",
+      intermediate: "Explain [CONCEPT] with:\n1. A clear definition\n2. How it works\n3. A concrete example\n4. Practical use cases\nIntermediate level. Reply in {lang}.",
+      expert: "Provide an expert explanation of [CONCEPT] including:\n- Theoretical foundations\n- Advanced mechanisms\n- Edge cases and exceptions\n- Latest developments\n- Resources to go deeper. Reply in {lang}."
+    },
+    crypto: {
+      beginner: "Explain [CRYPTO CONCEPT: blockchain/wallet/token/DeFi] in a very simple way.\nUse everyday analogies.\nI am completely new to crypto. Reply in {lang}.",
+      intermediate: "Explain how [CRYPTO CONCEPT] works on the Solana blockchain.\nInclude technical and practical aspects.\nHow can I use it concretely? Reply in {lang}.",
+      expert: "Analyze [PROTOCOL/TOKEN/MECHANISM] in the Solana ecosystem:\n- Technical architecture\n- Tokenomics and economic mechanisms\n- Risks and opportunities\n- Comparison with alternatives. Reply in {lang}."
+    },
+    ai: {
+      beginner: "Explain [AI CONCEPT] in a very simple way.\nI have no technical knowledge.\nUse concrete everyday examples. Reply in {lang}.",
+      intermediate: "Explain [AI CONCEPT] in detail:\n- How it works\n- What are the main models\n- How to use it in daily life\n- Current limitations. Reply in {lang}.",
+      expert: "Deeply analyze [AI CONCEPT/MODEL]:\n- Technical architecture and mechanisms\n- Benchmarks and comparisons\n- Advanced use cases\n- Recent trends and research\n- Ethical implications. Reply in {lang}."
+    }
   },
-  content: {
-    beginner: "Tu es un créateur de contenu.\nÉcris un post pour [PLATEFORME : Twitter/LinkedIn/Instagram] sur [SUJET].\nLe ton doit être simple et engageant. Maximum [NOMBRE] mots.\nRéponds en {lang}.",
-    intermediate: "Tu es un expert en marketing de contenu.\nCrée un [POST/ARTICLE/THREAD] sur [SUJET] pour [AUDIENCE CIBLE].\nInclus un hook accrocheur, 3 points clés et un CTA.\nTon : [PROFESSIONNEL/DÉCONTRACTÉ/INSPIRANT]. Réponds en {lang}.",
-    expert: "En tant que stratège de contenu, crée une campagne de contenu pour [SUJET] incluant :\n- 1 post long LinkedIn\n- 5 tweets pour un thread\n- 1 description Instagram\nCible : [AUDIENCE]. Objectif : [ENGAGEMENT/CONVERSION/NOTORIÉTÉ]. Réponds en {lang}."
-  },
-  analyze: {
-    beginner: "Analyse ce texte et explique-moi les points principaux de façon simple :\n[COLLE TON TEXTE ICI]\nDonne-moi un résumé en 3 points. Réponds en {lang}.",
-    intermediate: "Effectue une analyse approfondie de ce contenu :\n[CONTENU]\nIdentifie : les idées principales, les arguments, les points forts et faibles.\nStructure ta réponse clairement. Réponds en {lang}.",
-    expert: "Réalise une analyse critique et stratégique de [DOCUMENT/TEXTE/DONNÉES] :\n[CONTENU]\nÉvalue : la logique argumentative, les biais potentiels, les implications stratégiques.\nFournis des recommandations actionnables. Réponds en {lang}."
-  },
-  translate: {
-    beginner: "Traduis ce texte en [LANGUE CIBLE] de façon simple et naturelle :\n[TEXTE À TRADUIRE]\nSi un mot est difficile, explique-le. Réponds en {lang}.",
-    intermediate: "Traduis ce texte en [LANGUE CIBLE] en préservant le ton et le style original :\n[TEXTE]\nAdapte les expressions culturelles si nécessaire. Réponds en {lang}.",
-    expert: "Réalise une traduction professionnelle de [LANGUE SOURCE] vers [LANGUE CIBLE] :\n[TEXTE]\nPreserve le registre linguistique, les nuances culturelles et le style.\nFournis des notes de traducteur si nécessaire. Réponds en {lang}."
-  },
-  summarize: {
-    beginner: "Résume ce contenu en 5 points simples et clairs :\n[CONTENU À RÉSUMER]\nUtilise des mots simples. Réponds en {lang}.",
-    intermediate: "Crée un résumé structuré de ce contenu :\n[CONTENU]\nFormat : Introduction (2 phrases), Points clés (5 bullets), Conclusion.\nRéponds en {lang}.",
-    expert: "Produis un executive summary de [DOCUMENT/RAPPORT] :\n[CONTENU]\nInclus : contexte, enjeux stratégiques, points critiques, recommandations.\nMaximum 300 mots. Réponds en {lang}."
-  },
-  idea: {
-    beginner: "Génère 10 idées créatives pour [SUJET/PROJET].\nLes idées doivent être simples et réalisables.\nExplique brièvement chaque idée. Réponds en {lang}.",
-    intermediate: "Brainstorme 15 idées innovantes pour [SUJET] en tenant compte de [CONTRAINTES].\nClassifie-les par : facilité de mise en œuvre et impact potentiel.\nRéponds en {lang}.",
-    expert: "Conduis un brainstorming stratégique sur [PROBLÈME/OPPORTUNITÉ] :\nUtilise la méthode SCAMPER (Substitute, Combine, Adapt, Modify, Put to other uses, Eliminate, Reverse).\nFournis 3 idées disruptives avec leur plan d'action. Réponds en {lang}."
-  },
-  learn: {
-    beginner: "Explique-moi [CONCEPT] comme si j'avais 10 ans.\nUtilise des exemples du quotidien et des analogies simples.\nÉvite le jargon technique. Réponds en {lang}.",
-    intermediate: "Explique [CONCEPT] avec :\n1. La définition claire\n2. Comment ça fonctionne\n3. Un exemple concret\n4. Les cas d'usage pratiques\nNiveau : intermédiaire. Réponds en {lang}.",
-    expert: "Fournis une explication experte de [CONCEPT] incluant :\n- Les fondements théoriques\n- Les mécanismes avancés\n- Les cas limites et exceptions\n- Les dernières avancées dans le domaine\n- Les ressources pour approfondir. Réponds en {lang}."
-  },
-  crypto: {
-    beginner: "Explique-moi [CONCEPT CRYPTO : blockchain/wallet/token/DeFi] de façon très simple.\nUtilise des analogies du quotidien.\nJe suis complètement débutant en crypto. Réponds en {lang}.",
-    intermediate: "Explique le fonctionnement de [CONCEPT CRYPTO] sur la blockchain Solana.\nInclus les aspects techniques et pratiques.\nComment puis-je l'utiliser concrètement ? Réponds en {lang}.",
-    expert: "Analyse [PROTOCOLE/TOKEN/MÉCANISME] dans l'écosystème Solana :\n- Architecture technique\n- Tokenomics et mécanismes économiques\n- Risques et opportunités\n- Comparaison avec alternatives. Réponds en {lang}."
-  },
-  ai: {
-    beginner: "Explique-moi [CONCEPT IA : machine learning/LLM/neural network] de façon très simple.\nJe n'ai aucune connaissance technique.\nUtilise des exemples concrets de la vie quotidienne. Réponds en {lang}.",
-    intermediate: "Explique [CONCEPT IA] en détail :\n- Comment ça fonctionne\n- Quels sont les modèles principaux\n- Comment l'utiliser dans ma vie quotidienne\n- Les limites actuelles. Réponds en {lang}.",
-    expert: "Analyse en profondeur [CONCEPT/MODÈLE IA] :\n- Architecture et mécanismes techniques\n- Benchmark et comparaisons\n- Cas d'usage avancés\n- Tendances et recherches récentes\n- Implications éthiques. Réponds en {lang}."
+  ar: {
+    email: {
+      beginner: "أنت خبير في التواصل المهني.\nاكتب بريداً إلكترونياً رسمياً إلى [المستلم] بخصوص [الموضوع].\nيجب أن يكون احترافياً وموجزاً. الحد الأقصى 200 كلمة.\nأجب بـ {lang}.",
+      intermediate: "أنت خبير في التواصل المؤسسي.\nأعدّ بريداً إلكترونياً احترافياً يتضمن:\n- الموضوع: [موضوع البريد]\n- المستلم: [الاسم/المنصب]\n- الرسالة الرئيسية: [المحتوى]\n- دعوة واضحة للعمل\nأجب بـ {lang}.",
+      expert: "بوصفك خبيراً في التواصل الاستراتيجي، اكتب بريداً إلكترونياً من نوع [تفاوض/شراكة/متابعة] إلى [المستلم].\nطبّق تقنيات الإقناع وخطاف قوي وCTA محدداً.\nالسياق: [السياق]. أجب بـ {lang}."
+    },
+    code: {
+      beginner: "أنت مطوّر تعليمي.\nاشرح لي خطوة بخطوة كيفية إنشاء [ما أريد بناءه] بلغة [اللغة].\nأعطني الكود مع تعليقات واضحة.\nأنا مبتدئ. أجب بـ {lang}.",
+      intermediate: "أنت مطوّر أول.\nأنشئ [نوع الكود] بلغة [اللغة] الذي [الوظيفة].\nيجب أن يكون الكود نظيفاً ومعلقاً ويتبع أفضل الممارسات.\nالسياق: [السياق]. أجب بـ {lang}.",
+      expert: "بوصفك مهندس برمجيات، نفّذ [الوظيفة] بلغة [اللغة] باستخدام [النمط/الإطار].\nحسّن الأداء وقابلية الصيانة.\nضع اختبارات الوحدة. السياق: [السياق]. أجب بـ {lang}."
+    },
+    content: {
+      beginner: "أنت منشئ محتوى.\nاكتب منشوراً لـ [المنصة: Twitter/LinkedIn/Instagram] عن [الموضوع].\nيجب أن يكون بسيطاً وجذاباً. الحد الأقصى [عدد] كلمة.\nأجب بـ {lang}.",
+      intermediate: "أنت خبير في تسويق المحتوى.\nأنشئ [منشور/مقال/خيط] عن [الموضوع] لـ [الجمهور المستهدف].\nضمّن خطافاً جذاباً و3 نقاط رئيسية وCTA.\nالنبرة: [احترافية/غير رسمية/ملهمة]. أجب بـ {lang}.",
+      expert: "بوصفك استراتيجياً للمحتوى، أنشئ حملة محتوى لـ [الموضوع] تشمل:\n- منشور LinkedIn طويل\n- 5 تغريدات لخيط\n- وصف Instagram\nالجمهور: [الجمهور]. الهدف: [التفاعل/التحويل/الوعي]. أجب بـ {lang}."
+    },
+    analyze: {
+      beginner: "حلّل هذا النص واشرح النقاط الرئيسية ببساطة:\n[الصق نصك هنا]\nأعطني ملخصاً في 3 نقاط. أجب بـ {lang}.",
+      intermediate: "قم بتحليل معمّق لهذا المحتوى:\n[المحتوى]\nحدّد: الأفكار الرئيسية، الحجج، نقاط القوة والضعف.\nنظّم إجابتك بوضوح. أجب بـ {lang}.",
+      expert: "أجرِ تحليلاً نقدياً واستراتيجياً لـ [المستند/النص]:\n[المحتوى]\nقيّم: المنطق الحجاجي، التحيزات المحتملة، الآثار الاستراتيجية.\nقدّم توصيات قابلة للتنفيذ. أجب بـ {lang}."
+    },
+    translate: {
+      beginner: "ترجم هذا النص إلى [اللغة المستهدفة] بطريقة بسيطة وطبيعية:\n[النص المراد ترجمته]\nإذا كانت كلمة صعبة، اشرحها. أجب بـ {lang}.",
+      intermediate: "ترجم هذا النص إلى [اللغة المستهدفة] مع الحفاظ على النبرة والأسلوب الأصليين:\n[النص]\nكيّف التعابير الثقافية إذا لزم. أجب بـ {lang}.",
+      expert: "قدّم ترجمة احترافية من [اللغة المصدر] إلى [اللغة المستهدفة]:\n[النص]\nحافظ على المستوى اللغوي والفروق الثقافية والأسلوب.\nقدّم ملاحظات المترجم إذا لزم. أجب بـ {lang}."
+    },
+    summarize: {
+      beginner: "لخّص هذا المحتوى في 5 نقاط بسيطة وواضحة:\n[المحتوى المراد تلخيصه]\nاستخدم كلمات بسيطة. أجب بـ {lang}.",
+      intermediate: "أنشئ ملخصاً منظماً لهذا المحتوى:\n[المحتوى]\nالتنسيق: مقدمة (جملتان)، النقاط الرئيسية (5 نقاط)، الخاتمة.\nأجب بـ {lang}.",
+      expert: "أنتج ملخصاً تنفيذياً لـ [المستند/التقرير]:\n[المحتوى]\nضمّن: السياق، القضايا الاستراتيجية، النقاط الحرجة، التوصيات.\nحد أقصى 300 كلمة. أجب بـ {lang}."
+    },
+    idea: {
+      beginner: "ولّد 10 أفكار إبداعية لـ [الموضوع/المشروع].\nيجب أن تكون الأفكار بسيطة وقابلة للتنفيذ.\nاشرح كل فكرة باختصار. أجب بـ {lang}.",
+      intermediate: "فكّر بعصف ذهني في 15 فكرة مبتكرة لـ [الموضوع] مع مراعاة [القيود].\nصنّفها حسب: سهولة التنفيذ والتأثير المحتمل.\nأجب بـ {lang}.",
+      expert: "أجرِ عصفاً ذهنياً استراتيجياً حول [المشكلة/الفرصة]:\nاستخدم منهجية SCAMPER.\nقدّم 3 أفكار مبتكرة مع خطة عملها. أجب بـ {lang}."
+    },
+    learn: {
+      beginner: "اشرح لي [المفهوم] كأنني طفل في العاشرة من عمري.\nاستخدم أمثلة من الحياة اليومية وتشبيهات بسيطة.\nتجنب المصطلحات التقنية. أجب بـ {lang}.",
+      intermediate: "اشرح [المفهوم] مع:\n1. تعريف واضح\n2. كيف يعمل\n3. مثال ملموس\n4. حالات الاستخدام العملية\nمستوى متوسط. أجب بـ {lang}.",
+      expert: "قدّم شرحاً خبيراً لـ [المفهوم] يشمل:\n- الأسس النظرية\n- الآليات المتقدمة\n- الحالات الحدية والاستثناءات\n- أحدث التطورات\n- موارد للتعمق. أجب بـ {lang}."
+    },
+    crypto: {
+      beginner: "اشرح لي [مفهوم كريبتو: blockchain/wallet/token/DeFi] بطريقة بسيطة جداً.\nاستخدم تشبيهات من الحياة اليومية.\nأنا مبتدئ تماماً في الكريبتو. أجب بـ {lang}.",
+      intermediate: "اشرح كيف يعمل [مفهوم الكريبتو] على شبكة Solana.\nضمّن الجوانب التقنية والعملية.\nكيف يمكنني استخدامه فعلياً؟ أجب بـ {lang}.",
+      expert: "حلّل [البروتوكول/الرمز/الآلية] في نظام Solana:\n- البنية التقنية\n- التوكينوميكس والآليات الاقتصادية\n- المخاطر والفرص\n- المقارنة مع البدائل. أجب بـ {lang}."
+    },
+    ai: {
+      beginner: "اشرح لي [مفهوم الذكاء الاصطناعي] بطريقة بسيطة جداً.\nليس لديّ أي معرفة تقنية.\nاستخدم أمثلة ملموسة من الحياة اليومية. أجب بـ {lang}.",
+      intermediate: "اشرح [مفهوم الذكاء الاصطناعي] بالتفصيل:\n- كيف يعمل\n- ما هي النماذج الرئيسية\n- كيفية استخدامه في حياتي اليومية\n- القيود الحالية. أجب بـ {lang}.",
+      expert: "حلّل بعمق [مفهوم/نموذج الذكاء الاصطناعي]:\n- البنية التقنية والآليات\n- المعايير والمقارنات\n- حالات الاستخدام المتقدمة\n- الاتجاهات والأبحاث الحديثة\n- الآثار الأخلاقية. أجب بـ {lang}."
+    }
   }
 };
+// Fallback: DE, ES, ZH utilisent les templates EN
+prompts.de = prompts.en;
+prompts.es = prompts.en;
+prompts.zh = prompts.en;
 
 var aiSuffix = {
-  chatgpt: "\n\n[À utiliser sur : https://chat.openai.com]",
-  claude: "\n\n[À utiliser sur : https://claude.ai]",
-  gemini: "\n\n[À utiliser sur : https://gemini.google.com]",
-  grok: "\n\n[À utiliser sur : https://grok.com]",
-  any: ""
+  chatgpt: { fr: "\n\n[À utiliser sur : https://chat.openai.com]", en: "\n\n[Use at: https://chat.openai.com]", de: "\n\n[Verwenden auf: https://chat.openai.com]", es: "\n\n[Usar en: https://chat.openai.com]", zh: "\n\n[使用地址：https://chat.openai.com]", ar: "\n\n[استخدمه على: https://chat.openai.com]" },
+  claude:  { fr: "\n\n[À utiliser sur : https://claude.ai]", en: "\n\n[Use at: https://claude.ai]", de: "\n\n[Verwenden auf: https://claude.ai]", es: "\n\n[Usar en: https://claude.ai]", zh: "\n\n[使用地址：https://claude.ai]", ar: "\n\n[استخدمه على: https://claude.ai]" },
+  gemini:  { fr: "\n\n[À utiliser sur : https://gemini.google.com]", en: "\n\n[Use at: https://gemini.google.com]", de: "\n\n[Verwenden auf: https://gemini.google.com]", es: "\n\n[Usar en: https://gemini.google.com]", zh: "\n\n[使用地址：https://gemini.google.com]", ar: "\n\n[استخدمه على: https://gemini.google.com]" },
+  grok:    { fr: "\n\n[À utiliser sur : https://grok.com]", en: "\n\n[Use at: https://grok.com]", de: "\n\n[Verwenden auf: https://grok.com]", es: "\n\n[Usar en: https://grok.com]", zh: "\n\n[使用地址：https://grok.com]", ar: "\n\n[استخدمه على: https://grok.com]" },
+  any:     { fr: "", en: "", de: "", es: "", zh: "", ar: "" }
 };
+
+// Labels UI du générateur de prompt par langue
+var pgUI = {
+  fr: { title: "⚡ Générateur de Prompt IA", subtitle: "Génère le prompt parfait pour n'importe quelle IA en quelques clics !", l1: "1. Je veux...", l2: "2. Pour quelle IA ?", l3: "3. Mon niveau", l4: "4. Langue de la réponse", copy: "📋 Copier le prompt", copied: "✅ Copié !" },
+  en: { title: "⚡ AI Prompt Generator", subtitle: "Generate the perfect prompt for any AI in a few clicks!", l1: "1. I want to...", l2: "2. For which AI?", l3: "3. My level", l4: "4. Response language", copy: "📋 Copy prompt", copied: "✅ Copied!" },
+  de: { title: "⚡ KI-Prompt-Generator", subtitle: "Generiere den perfekten Prompt für jede KI in wenigen Klicks!", l1: "1. Ich möchte...", l2: "2. Für welche KI?", l3: "3. Mein Level", l4: "4. Antwortsprache", copy: "📋 Prompt kopieren", copied: "✅ Kopiert!" },
+  es: { title: "⚡ Generador de Prompts IA", subtitle: "¡Genera el prompt perfecto para cualquier IA en pocos clics!", l1: "1. Quiero...", l2: "2. ¿Para qué IA?", l3: "3. Mi nivel", l4: "4. Idioma de la respuesta", copy: "📋 Copiar prompt", copied: "✅ ¡Copiado!" },
+  zh: { title: "⚡ AI 提示词生成器", subtitle: "几次点击生成完美的AI提示词！", l1: "1. 我想...", l2: "2. 用于哪个AI？", l3: "3. 我的水平", l4: "4. 回答语言", copy: "📋 复制提示词", copied: "✅ 已复制！" },
+  ar: { title: "⚡ مولّد نصوص الذكاء الاصطناعي", subtitle: "ولّد النص التوجيهي المثالي لأي ذكاء اصطناعي بنقرات قليلة!", l1: "1. أريد أن...", l2: "2. لأي ذكاء اصطناعي؟", l3: "3. مستواي", l4: "4. لغة الإجابة", copy: "📋 نسخ النص", copied: "✅ تم النسخ!" }
+};
+
+// Options des tâches par langue
+var pgTasks = {
+  fr: { email: "✉️ Écrire un email professionnel", code: "💻 Créer du code", content: "📝 Créer du contenu (post, article)", analyze: "🔍 Analyser un texte ou document", translate: "🌍 Traduire un texte", summarize: "📋 Résumer un contenu", idea: "💡 Trouver des idées", learn: "🎓 Apprendre un concept", crypto: "🪙 Comprendre la crypto / $LAI", ai: "🤖 Comprendre l'IA" },
+  en: { email: "✉️ Write a professional email", code: "💻 Create code", content: "📝 Create content (post, article)", analyze: "🔍 Analyze a text or document", translate: "🌍 Translate a text", summarize: "📋 Summarize content", idea: "💡 Find ideas", learn: "🎓 Learn a concept", crypto: "🪙 Understand crypto / $LAI", ai: "🤖 Understand AI" },
+  de: { email: "✉️ Professionelle E-Mail schreiben", code: "💻 Code erstellen", content: "📝 Inhalte erstellen (Post, Artikel)", analyze: "🔍 Text oder Dokument analysieren", translate: "🌍 Text übersetzen", summarize: "📋 Inhalt zusammenfassen", idea: "💡 Ideen finden", learn: "🎓 Konzept lernen", crypto: "🪙 Krypto / $LAI verstehen", ai: "🤖 KI verstehen" },
+  es: { email: "✉️ Escribir un email profesional", code: "💻 Crear código", content: "📝 Crear contenido (post, artículo)", analyze: "🔍 Analizar un texto o documento", translate: "🌍 Traducir un texto", summarize: "📋 Resumir contenido", idea: "💡 Encontrar ideas", learn: "🎓 Aprender un concepto", crypto: "🪙 Entender crypto / $LAI", ai: "🤖 Entender la IA" },
+  zh: { email: "✉️ 撰写专业邮件", code: "💻 创建代码", content: "📝 创作内容（帖子、文章）", analyze: "🔍 分析文本或文档", translate: "🌍 翻译文本", summarize: "📋 总结内容", idea: "💡 寻找想法", learn: "🎓 学习概念", crypto: "🪙 了解加密货币 / $LAI", ai: "🤖 了解AI" },
+  ar: { email: "✉️ كتابة بريد إلكتروني احترافي", code: "💻 إنشاء كود برمجي", content: "📝 إنشاء محتوى (منشور، مقال)", analyze: "🔍 تحليل نص أو مستند", translate: "🌍 ترجمة نص", summarize: "📋 تلخيص محتوى", idea: "💡 إيجاد أفكار", learn: "🎓 تعلّم مفهوم", crypto: "🪙 فهم العملات المشفرة / $LAI", ai: "🤖 فهم الذكاء الاصطناعي" }
+};
+
+// Niveaux par langue
+var pgLevels = {
+  fr: { beginner: "🐣 Débutant", intermediate: "📚 Intermédiaire", expert: "🚀 Expert" },
+  en: { beginner: "🐣 Beginner", intermediate: "📚 Intermediate", expert: "🚀 Expert" },
+  de: { beginner: "🐣 Anfänger", intermediate: "📚 Fortgeschritten", expert: "🚀 Experte" },
+  es: { beginner: "🐣 Principiante", intermediate: "📚 Intermedio", expert: "🚀 Experto" },
+  zh: { beginner: "🐣 初学者", intermediate: "📚 中级", expert: "🚀 专家" },
+  ar: { beginner: "🐣 مبتدئ", intermediate: "📚 متوسط", expert: "🚀 خبير" }
+};
+
+function updatePromptUI() {
+  var lang = (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+  var ui = pgUI[lang] || pgUI['en'];
+  var tasks = pgTasks[lang] || pgTasks['en'];
+  var levels = pgLevels[lang] || pgLevels['en'];
+
+  // Titre et sous-titre
+  var titleEl = document.getElementById('pg-title');
+  var subtitleEl = document.getElementById('pg-subtitle');
+  if (titleEl) titleEl.textContent = ui.title;
+  if (subtitleEl) subtitleEl.textContent = ui.subtitle;
+
+  // Labels
+  var labels = document.querySelectorAll('.pg-label');
+  if (labels[0]) labels[0].textContent = ui.l1;
+  if (labels[1]) labels[1].textContent = ui.l2;
+  if (labels[2]) labels[2].textContent = ui.l3;
+  if (labels[3]) labels[3].textContent = ui.l4;
+
+  // Options tâches
+  var taskSel = document.getElementById('pg-task');
+  if (taskSel) {
+    var vals = ['email','code','content','analyze','translate','summarize','idea','learn','crypto','ai'];
+    for (var i = 0; i < taskSel.options.length; i++) {
+      var v = vals[i];
+      if (tasks[v]) taskSel.options[i].textContent = tasks[v];
+    }
+  }
+
+  // Options niveaux
+  var levelSel = document.getElementById('pg-level');
+  if (levelSel) {
+    levelSel.options[0].textContent = levels.beginner;
+    levelSel.options[1].textContent = levels.intermediate;
+    levelSel.options[2].textContent = levels.expert;
+  }
+
+  // Bouton copier
+  var copyBtn = document.getElementById('pg-copy-btn');
+  if (copyBtn) copyBtn.textContent = ui.copy;
+
+  generatePrompt();
+}
 
 function generatePrompt() {
   var task = document.getElementById('pg-task').value;
   var level = document.getElementById('pg-level').value;
   var ai = document.getElementById('pg-ai').value;
   var lang = document.getElementById('pg-lang').value;
+  var uiLang = (typeof currentLang !== 'undefined' ? currentLang : 'fr');
 
-  var template = prompts[task][level];
-  var result = template.replace('{lang}', lang) + aiSuffix[ai];
+  var langPrompts = prompts[uiLang] || prompts['en'] || prompts['fr'];
+  var template = langPrompts[task][level];
+  var suffix = (aiSuffix[ai] && aiSuffix[ai][uiLang]) ? aiSuffix[ai][uiLang] : (aiSuffix[ai]['en'] || '');
+  var result = template.replace('{lang}', lang) + suffix;
 
   document.getElementById('pg-result').textContent = result;
 }
 
 function copyPrompt() {
   var text = document.getElementById('pg-result').textContent;
+  var uiLang = (typeof currentLang !== 'undefined' ? currentLang : 'fr');
+  var ui = pgUI[uiLang] || pgUI['en'];
   navigator.clipboard.writeText(text).then(function() {
     var btn = document.getElementById('pg-copy-btn');
-    btn.textContent = '✅ Copié !';
-    setTimeout(function() { btn.textContent = '📋 Copier le prompt'; }, 2000);
+    btn.textContent = ui.copied;
+    setTimeout(function() { btn.textContent = ui.copy; }, 2000);
   });
 }
 
-window.addEventListener('load', function() { generatePrompt(); });
+window.addEventListener('load', function() {
+  // Initialise la langue depuis le sélecteur
+  var sel = document.getElementById('langSelect');
+  if (sel) currentLang = sel.value;
+
+  // Event listener : change de langue → met tout à jour
+  if (sel) {
+    sel.addEventListener('change', function() {
+      currentLang = this.value;
+      updatePromptUI();       // Générateur de prompt
+      updateChatLang();       // Chatbot
+      // Si un résultat jargon est visible, le rafraîchir
+      var jargonResult = document.getElementById('jargon-result');
+      if (jargonResult && jargonResult.style.display !== 'none') {
+        translateJargon();
+      }
+    });
+  }
+
+  updatePromptUI();
+});
 </script>
 
 <!-- TOKENOMICS -->
