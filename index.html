@@ -387,9 +387,13 @@ function copyCA() {
     setTimeout(function() { btn.textContent = i18n[currentLang].copy_btn || 'Copier'; }, 2000);
   });
 }
-document.getElementById('langSelect').addEventListener('change', function() {
-  setLang(this.value);
-  if (typeof startQuiz === 'function') startQuiz();
+document.addEventListener('DOMContentLoaded', function() {
+  var sel = document.getElementById('langSelect');
+  sel.value = 'fr'; // synchro visuelle avec currentLang
+  sel.addEventListener('change', function() {
+    setLang(this.value);
+    if (typeof startQuiz === 'function') startQuiz();
+  });
 });
 </script>
 <body>
