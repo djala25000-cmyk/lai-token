@@ -1,0 +1,148 @@
+🔁 COMMENT REPRENDRE CE PROJET
+================================
+Au début de chaque nouvelle session avec Claude :
+1. Ouvrez ce fichier Claude.txt
+2. Copiez TOUT le contenu (Ctrl+A puis Ctrl+C)
+3. Collez-le dans le chat (Ctrl+V) avec le message "reprends le projet"
+Claude lira ce résumé et continuera exactement là où on en était.
+
+⚠️ INSTRUCTION CLAUDE : Mettre à jour ce fichier Claude.txt à chaque étape importante franchie.
+================================
+🧠 INSTRUCTIONS POUR CLAUDE
+================================
+- Toujours expliquer pas à pas ce que tu fais et POURQUOI
+- Expliquer à quoi sert chaque fichier, programme, logiciel ou ligne de code produit
+- Ne jamais supposer que l'utilisateur connaît un terme technique sans l'expliquer
+- Adapter le niveau d'explication à quelqu'un qui apprend
+================================
+Projet Meme Coin Solana — LEARN A.I $LAI
+========================================
+TOKEN
+-----
+Nom        : LEARN A.I
+Ticker     : $LAI
+Supply     : 100 milliards (100_000_000_000)
+Décimales  : 6
+Réseau     : mainnet-beta ✅ DÉPLOYÉ
+
+TOKEN OFFICIEL (MAINNET)
+------------------------
+✅ Mint Address : FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5
+🔗 Solscan      : https://solscan.io/token/FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5
+🟢 Pump.fun     : https://pump.fun/coin/DgaQtZvWN8hf52H4pjsossbLqvQPFqM9ZpQxhS2fpump
+🌐 Site web     : https://lai-token.pages.dev (URL PRINCIPALE — Cloudflare Pages)
+📦 GitHub repo  : https://github.com/djala25000-cmyk/lai-token (REPO PROPRE)
+📦 Ancien repo  : https://github.com/djala25000-cmyk/learnai-lai (NE PLUS UTILISER)
+👥 Communauté   : https://pump.fun/communities/DgaQtZvWN8hf52H4pjsossbLqvQPFqM9ZpQxhS2fpump
+
+STRUCTURE DU REPO lai-token (PROPRE)
+-------------------------------------
+functions/
+    └── chat.js   → fonction chatbot Cloudflare Pages
+index.html        → site web complet
+(c'est tout ! Repo propre sans sous-dossiers)
+
+FICHIERS SUR LE PC
+------------------
+C:\Users\alexia\Desktop\projet json sol\
+├── index.html          → version locale du site (à modifier ici)
+├── index(1).html       → copie de travail
+├── functions\chat.js   → fonction chatbot
+├── wallet-principal.json → NE PAS SUPPRIMER
+├── wallet-team.json
+├── wallet-marketing.json
+├── wallet-airdrop.json
+├── contenu_LAI.md      → 20 posts Twitter FR
+└── contenu_LAI_EN.md   → 20 posts Twitter EN
+
+PROCÉDURE GIT (NOUVEAU REPO PROPRE)
+-------------------------------------
+cd "C:\Users\alexia\Desktop\projet json sol"
+git add [fichier]
+git commit -m "description"
+git push
+→ Cloudflare redéploie automatiquement en 2-3 min
+→ URL : https://lai-token.pages.dev
+
+DISTRIBUTION DE LA SUPPLY ✅ COMPLÈTE
+--------------------------------------
+✅ 80% Liquidité  → 4PSs4GT3bjRXjFMWkVBHJbonuJ972N8UWFsaRZLU4inu
+✅ 10% Marketing  → 4qtURmJf4AYVHXCDQWFLKvFCTvFechT5mfs2X928uVLw
+✅  5% Équipe     → BpBVYKytshittycwrH1Fki6VHDMJ2Um8stUZ4ydEUqN1
+✅  5% Airdrop    → 9mhhdhyoHiTgVnrE8DcTM3DcD4DyJrbyuTHoevUDo5js
+
+RÉSEAUX SOCIAUX
+---------------
+Twitter/X : https://twitter.com/LearnAI_LAI ✅
+Discord   : https://discord.gg/dnqzEG5u ✅
+Telegram  : à créer plus tard
+
+WALLET PRINCIPAL
+----------------
+Adresse : 4PSs4GT3bjRXjFMWkVBHJbonuJ972N8UWFsaRZLU4inu
+Phantom  : ✅ importé sur Firefox
+
+FONCTIONNALITÉS DU SITE
+------------------------
+✅ Multilingue : FR / EN / DE / ES / ZH / AR
+✅ Quiz IA 5 questions avec stats temps réel + recommandation IA
+✅ Traducteur de jargon IA (15 termes)
+✅ Générateur de prompt IA
+✅ Chatbot flottant "🤖 Chat $LAI"
+✅ Bouton "Acheter $LAI" → pump.fun
+✅ Adresse du contrat copiable
+
+CHATBOT — ÉTAT EN COURS
+------------------------
+⏳ Chatbot en cours de débogage sur Cloudflare Pages
+Problème actuel : HTTP 405 sur /functions/chat
+Dernière tentative : fonction simplifiée avec onRequest (sans vérif méthode)
+Fichier : functions/chat.js (dans le repo lai-token)
+Clé GROQ : configurée sur Cloudflare (Variables and Secrets)
+URL chatbot dans index.html : /functions/chat ✅ (corrigé)
+Prochain test : vérifier console F12 après le dernier push
+
+HÉBERGEMENT
+-----------
+✅ Cloudflare Pages : https://lai-token.pages.dev
+✅ Connecté à GitHub repo : djala25000-cmyk/lai-token
+✅ GROQ_API_KEY configurée dans Variables and Secrets Cloudflare
+❌ Netlify : abandonné (crédits épuisés)
+❌ GitHub Pages : abandonné (sans chatbot)
+
+ÉTAPES COMPLÉTÉES ✅
+--------------------
+[✅] Token $LAI déployé sur mainnet-beta
+[✅] Supply 100 milliards distribuée (6 décimales)
+[✅] Site web sur Cloudflare Pages
+[✅] Token listé sur pump.fun
+[✅] Twitter @LearnAI_LAI créé
+[✅] Pack contenu FR + EN (40 posts)
+[✅] Discord actif
+[✅] Quiz IA multilingue avec stats
+[✅] Traducteur jargon IA
+[✅] Générateur de prompt IA
+[✅] Repo GitHub propre créé (lai-token)
+[✅] Clé GROQ configurée sur Cloudflare
+[✅] Chatbot i18n corrigé (typing/error/powered traduits selon la langue)
+[✅] Versionnage index.html mis en place (commentaire en haut du fichier)
+
+VERSIONS index.html
+--------------------
+v1.0 → version initiale déployée sur Cloudflare
+v1.1 → 2026-06-11 | fix chatbot i18n : textes "réflexion/erreur/propulsé" maintenant traduits
+
+ÉTAPES RESTANTES
+----------------
+[ ] Corriger footer incomplet dans index.html (s'arrête en plein milieu du footer)
+[ ] Créer Telegram
+[ ] Publier posts Twitter régulièrement
+[ ] Partager sur Reddit : r/SolanaMemeCoins, r/CryptoMoonShots
+
+NOTE TECHNIQUE
+--------------
+Bug corrigé : 100B tokens avec 9 décimales = overflow u64 Solana
+Solution    : 6 décimales ✅
+Repo propre : git initialisé dans C:\Users\alexia\Desktop\projet json sol
+→ Les fichiers sont maintenant à la racine du repo (plus de sous-dossiers)
+Footer index.html tronqué à la ligne 1680 (milieu du lien Telegram) — le navigateur l'accepte mais c'est à corriger
