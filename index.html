@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- VERSION: v1.1 | 2026-06-11 | fix: chatbot i18n typing/error/powered textes traduits -->
+<!-- VERSION: v1.2 | 2026-06-11 | cleanup: suppression functions/chat.js doublon -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -378,6 +378,8 @@ function setLang(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
   if (typeof updateChatLang === 'function') updateChatLang();
+  if (typeof updatePromptUI === 'function') updatePromptUI();
+  if (typeof updateJargonTitle === 'function') updateJargonTitle();
 }
 
 function copyCA() {
@@ -946,7 +948,7 @@ window.addEventListener('load', function() {
 
 <!-- TRADUCTEUR DE JARGON IA -->
 <div class="section" id="jargon">
-  <h2 class="section-title">📖 Traducteur de Jargon IA</h2>
+  <h2 class="section-title" id="jargon-title">📖 Traducteur de Jargon IA</h2>
   <p style="color:var(--muted);font-size:.82rem;margin-bottom:1.5rem;">Un terme technique que tu ne comprends pas ? Tape-le et reçois une explication simple ! 🧠</p>
 
   <div style="max-width:600px;margin:0 auto;">
@@ -1158,6 +1160,20 @@ function quickSearch(term) {
 
 function suggestJargon(val) {
   if (val.length > 2) translateJargon();
+}
+
+var jargonTitles = {
+  fr: "📖 Traducteur de Jargon IA",
+  en: "📖 AI Jargon Translator",
+  de: "📖 KI-Jargon-Übersetzer",
+  es: "📖 Traductor de Jerga IA",
+  zh: "📖 AI 术语翻译器",
+  ar: "📖 مترجم مصطلحات الذكاء الاصطناعي"
+};
+
+function updateJargonTitle() {
+  var el = document.getElementById('jargon-title');
+  if (el) el.textContent = jargonTitles[currentLang] || jargonTitles['en'];
 }
 </script>
 

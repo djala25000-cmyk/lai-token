@@ -9,7 +9,11 @@ export async function onRequest(context) {
   try {
     const body = await context.request.json();
     const message = body.message || 'Hello';
+    const lang = body.lang || 'fr';
     const apiKey = context.env.GROQ_API_KEY;
+
+    const langNames = { fr:'French', en:'English', de:'German', es:'Spanish', zh:'Chinese', ar:'Arabic' };
+    const langName = langNames[lang] || 'English';
 
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
@@ -20,7 +24,7 @@ export async function onRequest(context) {
       body: JSON.stringify({
         model: 'llama-3.3-70b-versatile',
         messages: [
-          { role: 'system', content: 'Tu es l assistant de LEARN A.I $LAI. Reponds brievement dans la langue de l utilisateur.' },
+          { role: 'system', content: `You are the assistant of LEARN A.I $LAI, a meme coin on Solana dedicated to AI education. You MUST reply ONLY in ${langName}. Be brief and helpful.` },
           { role: 'user', content: message }
         ],
         max_tokens: 300
