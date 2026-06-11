@@ -1602,7 +1602,7 @@ window.addEventListener('load', function() {
     <input id="chat-input" type="text" placeholder="Pose ta question..." id="chat-input" style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.6rem .8rem;color:var(--text);font-family:'Space Mono',monospace;font-size:.75rem;outline:none;" onkeypress="if(event.key==='Enter')sendChat()" onfocus="this.style.borderColor='rgba(79,255,176,.4)'" onblur="this.style.borderColor='var(--border)'"/>
     <button onclick="sendChat()" style="background:var(--accent);color:#050f08;border:none;border-radius:8px;padding:.6rem .9rem;font-weight:700;cursor:pointer;font-size:.8rem;">➤</button>
   </div>
-  <div style="text-align:center;padding:.4rem;color:var(--muted);font-size:.6rem;">⚡ Propulsé par Groq IA</div>
+  <div id="chat-powered" style="text-align:center;padding:.4rem;color:var(--muted);font-size:.6rem;">⚡ Propulsé par Groq IA</div>
 </div>
 
 <script>
@@ -1619,9 +1619,10 @@ function updateChatLang() {
   var t = chatTranslations[currentLang] || chatTranslations['en'];
   var welcome = document.getElementById('chat-welcome');
   var input = document.getElementById('chat-input');
-  var title = document.querySelector('#chat-window div span');
+  var powered = document.getElementById('chat-powered');
   if (welcome) welcome.textContent = t.welcome;
   if (input) input.placeholder = t.placeholder;
+  if (powered) powered.textContent = t.powered;
 }
 
 function toggleChat() {
@@ -1648,7 +1649,8 @@ async function sendChat() {
 
   var typingDiv = document.createElement('div');
   typingDiv.style.cssText = 'background:rgba(79,255,176,.08);border:1px solid rgba(79,255,176,.2);border-radius:8px;padding:.75rem;font-size:.78rem;color:var(--muted);max-width:90%;';
-  typingDiv.textContent = '⏳ Réflexion en cours...';
+  var ct = chatTranslations[currentLang] || chatTranslations['en'];
+  typingDiv.textContent = ct.typing;
   messages.appendChild(typingDiv);
   messages.scrollTop = messages.scrollHeight;
 
@@ -1656,13 +1658,14 @@ async function sendChat() {
     var response = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: msg })
+      body: JSON.stringify({ message: msg, lang: currentLang })
     });
     var data = await response.json();
     typingDiv.style.color = 'var(--text)';
     typingDiv.textContent = '🤖 ' + data.reply;
   } catch(e) {
-    typingDiv.textContent = '❌ Erreur. Réessaie !';
+    var ct2 = chatTranslations[currentLang] || chatTranslations['en'];
+    typingDiv.textContent = ct2.error;
   }
   messages.scrollTop = messages.scrollHeight;
 }
