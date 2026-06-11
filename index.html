@@ -949,7 +949,7 @@ window.addEventListener('load', function() {
 <!-- TRADUCTEUR DE JARGON IA -->
 <div class="section" id="jargon">
   <h2 class="section-title" id="jargon-title">📖 Traducteur de Jargon IA</h2>
-  <p style="color:var(--muted);font-size:.82rem;margin-bottom:1.5rem;">Un terme technique que tu ne comprends pas ? Tape-le et reçois une explication simple ! 🧠</p>
+  <p id="jargon-subtitle" style="color:var(--muted);font-size:.82rem;margin-bottom:1.5rem;">Un terme technique que tu ne comprends pas ? Tape-le et reçois une explication simple ! 🧠</p>
 
   <div style="max-width:600px;margin:0 auto;">
 
@@ -1170,10 +1170,20 @@ var jargonTitles = {
   zh: "📖 AI 术语翻译器",
   ar: "📖 مترجم مصطلحات الذكاء الاصطناعي"
 };
+var jargonSubtitles = {
+  fr: "Un terme technique que tu ne comprends pas ? Tape-le et reçois une explication simple ! 🧠",
+  en: "A technical term you don't understand? Type it and get a simple explanation! 🧠",
+  de: "Ein technischer Begriff, den du nicht verstehst? Gib ihn ein und erhalte eine einfache Erklärung! 🧠",
+  es: "¿Un término técnico que no entiendes? ¡Escríbelo y recibe una explicación simple! 🧠",
+  zh: "有不理解的技术术语？输入它，获取简单解释！🧠",
+  ar: "مصطلح تقني لا تفهمه؟ اكتبه واحصل على شرح بسيط! 🧠"
+};
 
 function updateJargonTitle() {
   var el = document.getElementById('jargon-title');
   if (el) el.textContent = jargonTitles[currentLang] || jargonTitles['en'];
+  var sub = document.getElementById('jargon-subtitle');
+  if (sub) sub.textContent = jargonSubtitles[currentLang] || jargonSubtitles['en'];
 }
 </script>
 
