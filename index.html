@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- VERSION: v1.5 | 2026-06-15 | compteur visiteurs rétro via CountAPI JS (remplacement badge image) -->
+<!-- VERSION: v1.6 | 2026-06-15 | section airdrop Twitter multilingue (FR/EN/DE/ES/ZH/AR) -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -378,6 +378,7 @@ function setLang(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
   if (typeof updateChatLang === 'function') updateChatLang();
+  if (typeof updateAirdropLang === 'function') updateAirdropLang();
   if (typeof updatePromptUI === 'function') updatePromptUI();
   if (typeof updateJargonTitle === 'function') updateJargonTitle();
 }
@@ -1513,6 +1514,7 @@ window.addEventListener('load', function() {
       currentLang = this.value;
       updatePromptUI();
       updateChatLang();
+      updateAirdropLang();
       var jr = document.getElementById('jargon-result');
       if (jr && jr.style.display !== 'none') translateJargon();
     });
@@ -1633,6 +1635,77 @@ window.addEventListener('load', function() {
 </div>
 
 <script>
+var airdropTranslations = {
+  fr: {
+    title: "AIRDROP $LAI",
+    subtitle: "500 000 tokens GRATUITS pour les premiers participants !",
+    step1: 'Suivre <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a> sur Twitter/X',
+    step2: "Retweeter l'annonce de l'airdrop",
+    step3: 'Envoyer votre adresse wallet Solana en DM à <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a>',
+    label1: "$LAI par wallet", label2: "gagnants max", label3: "durée limitée",
+    btn: "🐦 Participer sur Twitter"
+  },
+  en: {
+    title: "AIRDROP $LAI",
+    subtitle: "500,000 FREE tokens for early participants!",
+    step1: 'Follow <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a> on Twitter/X',
+    step2: "Retweet the airdrop announcement",
+    step3: 'Send your Solana wallet address via DM to <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a>',
+    label1: "$LAI per wallet", label2: "max winners", label3: "limited time",
+    btn: "🐦 Join on Twitter"
+  },
+  de: {
+    title: "AIRDROP $LAI",
+    subtitle: "500.000 KOSTENLOSE Token für frühe Teilnehmer!",
+    step1: 'Folge <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a> auf Twitter/X',
+    step2: "Retweete die Airdrop-Ankündigung",
+    step3: 'Sende deine Solana-Wallet-Adresse per DM an <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a>',
+    label1: "$LAI pro Wallet", label2: "max. Gewinner", label3: "begrenzte Zeit",
+    btn: "🐦 Auf Twitter mitmachen"
+  },
+  es: {
+    title: "AIRDROP $LAI",
+    subtitle: "¡500.000 tokens GRATIS para los primeros participantes!",
+    step1: 'Sigue a <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a> en Twitter/X',
+    step2: "Retweetea el anuncio del airdrop",
+    step3: 'Envía tu dirección de wallet Solana por DM a <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a>',
+    label1: "$LAI por wallet", label2: "ganadores máx.", label3: "tiempo limitado",
+    btn: "🐦 Participar en Twitter"
+  },
+  zh: {
+    title: "空投 $LAI",
+    subtitle: "前期参与者可获得 500,000 枚免费代币！",
+    step1: '在 Twitter/X 上关注 <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a>',
+    step2: "转发空投公告",
+    step3: '私信 <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a> 发送你的 Solana 钱包地址',
+    label1: "每个钱包 $LAI", label2: "最多获奖者", label3: "限时活动",
+    btn: "🐦 在 Twitter 参与"
+  },
+  ar: {
+    title: "إسقاط جوي $LAI",
+    subtitle: "!500,000 رمز مجاني للمشاركين الأوائل",
+    step1: 'تابع <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a> على Twitter/X',
+    step2: "أعد تغريد إعلان الإسقاط الجوي",
+    step3: 'أرسل عنوان محفظة Solana عبر رسالة مباشرة إلى <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a>',
+    label1: "$LAI لكل محفظة", label2: "حد أقصى للفائزين", label3: "وقت محدود",
+    btn: "🐦 المشاركة على Twitter"
+  }
+};
+
+function updateAirdropLang() {
+  var t = airdropTranslations[currentLang] || airdropTranslations['en'];
+  var el = function(id) { return document.getElementById(id); };
+  if (el('airdrop-title'))   el('airdrop-title').innerHTML   = t.title;
+  if (el('airdrop-sub'))     el('airdrop-sub').innerHTML     = t.subtitle;
+  if (el('airdrop-step1'))   el('airdrop-step1').innerHTML   = t.step1;
+  if (el('airdrop-step2'))   el('airdrop-step2').innerHTML   = t.step2;
+  if (el('airdrop-step3'))   el('airdrop-step3').innerHTML   = t.step3;
+  if (el('airdrop-label1'))  el('airdrop-label1').innerHTML  = t.label1;
+  if (el('airdrop-label2'))  el('airdrop-label2').innerHTML  = t.label2;
+  if (el('airdrop-label3'))  el('airdrop-label3').innerHTML  = t.label3;
+  if (el('airdrop-btn'))     el('airdrop-btn').innerHTML     = t.btn;
+}
+
 var chatTranslations = {
   fr: { welcome: "👋 Bonjour ! Je suis l'assistant $LAI. Pose-moi n'importe quelle question sur l'IA ou sur $LAI !", placeholder: "Pose ta question...", title: "💬 Assistant $LAI", typing: "⏳ Réflexion en cours...", error: "❌ Erreur. Réessaie !", powered: "⚡ Propulsé par Groq IA" },
   en: { welcome: "👋 Hello! I'm the $LAI assistant. Ask me anything about AI or $LAI!", placeholder: "Ask your question...", title: "💬 $LAI Assistant", typing: "⏳ Thinking...", error: "❌ Error. Try again!", powered: "⚡ Powered by Groq AI" },
@@ -1740,6 +1813,48 @@ async function sendChat() {
     });
 })();
 </script>
+
+<!-- SECTION AIRDROP -->
+<section style="max-width:700px;margin:3rem auto;padding:2rem 1.5rem;background:var(--surface);border:2px solid var(--accent);border-radius:16px;text-align:center;box-shadow:0 0 30px rgba(79,255,176,0.15);">
+  <div style="font-size:2.5rem;margin-bottom:.5rem;">🎁</div>
+  <h2 id="airdrop-title" style="color:var(--accent);font-size:1.5rem;letter-spacing:2px;margin-bottom:.5rem;">AIRDROP $LAI</h2>
+  <p id="airdrop-sub" style="color:var(--accent3);font-size:1.1rem;font-weight:bold;margin-bottom:1.5rem;">500 000 tokens GRATUITS pour les premiers participants !</p>
+
+  <div style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.5rem;text-align:left;background:var(--surface2);border-radius:10px;padding:1.25rem;">
+    <div style="display:flex;align-items:center;gap:.75rem;">
+      <span style="font-size:1.4rem;">1️⃣</span>
+      <span id="airdrop-step1">Suivre <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a> sur Twitter/X</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem;">
+      <span style="font-size:1.4rem;">2️⃣</span>
+      <span id="airdrop-step2">Retweeter l'annonce de l'airdrop</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem;">
+      <span style="font-size:1.4rem;">3️⃣</span>
+      <span id="airdrop-step3">Envoyer votre adresse wallet Solana en DM à <a href="https://twitter.com/LearnAI_LAI" target="_blank" style="color:var(--accent);">@LearnAI_LAI</a></span>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+    <div style="text-align:center;">
+      <div style="color:var(--accent);font-size:1.4rem;font-weight:bold;">500 000</div>
+      <div id="airdrop-label1" style="color:var(--muted);font-size:.8rem;">$LAI par wallet</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="color:var(--accent);font-size:1.4rem;font-weight:bold;">10 000</div>
+      <div id="airdrop-label2" style="color:var(--muted);font-size:.8rem;">gagnants max</div>
+    </div>
+    <div style="text-align:center;">
+      <div style="color:var(--accent);font-size:1.4rem;font-weight:bold;">1 mois</div>
+      <div id="airdrop-label3" style="color:var(--muted);font-size:.8rem;">durée limitée</div>
+    </div>
+  </div>
+
+  <a id="airdrop-btn" href="https://twitter.com/LearnAI_LAI" target="_blank"
+     style="display:inline-block;background:var(--accent);color:#050f08;font-weight:bold;padding:.75rem 2rem;border-radius:8px;text-decoration:none;font-size:1rem;letter-spacing:1px;">
+    🐦 Participer sur Twitter
+  </a>
+</section>
 
 <!-- FOOTER -->
 <footer>
