@@ -1723,16 +1723,19 @@ async function sendChat() {
 </div>
 <script>
 (function() {
-  // CountAPI : compteur gratuit, sans inscription
-  // Chaque chargement de page = +1 visite
-  fetch('https://api.countapi.xyz/hit/lai-token.pages.dev/visits')
+  var el = document.getElementById('retro-count');
+  var timeout = setTimeout(function() {
+    if (el && el.textContent === '...') el.textContent = '—';
+  }, 5000);
+
+  fetch('https://api.counterapi.dev/v1/lai-token-pages-dev/visits/up')
     .then(function(r) { return r.json(); })
     .then(function(data) {
-      var el = document.getElementById('retro-count');
-      if (el) el.textContent = data.value.toLocaleString();
+      clearTimeout(timeout);
+      if (el) el.textContent = (data.count || data.value || 0).toLocaleString();
     })
     .catch(function() {
-      var el = document.getElementById('retro-count');
+      clearTimeout(timeout);
       if (el) el.textContent = '—';
     });
 })();
