@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- VERSION: v1.2 | 2026-06-11 | cleanup: suppression functions/chat.js doublon -->
+<!-- VERSION: v1.4 | 2026-06-15 | ajout compteur visiteurs flottant style rétro -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -1698,10 +1698,52 @@ async function sendChat() {
 }
 </script>
 
+<!-- COMPTEUR VISITEURS FLOTTANT STYLE RÉTRO -->
+<div id="retro-counter" style="
+  position: fixed;
+  bottom: 80px;
+  left: 16px;
+  z-index: 999;
+  background: #000080;
+  border: 3px outset #c0c0c0;
+  padding: 6px 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: #00ff00;
+  text-shadow: 0 0 6px #00ff00;
+  box-shadow: 2px 2px 0 #000, inset 1px 1px 0 #fff, inset -1px -1px 0 #808080;
+  cursor: default;
+  user-select: none;
+  min-width: 120px;
+  text-align: center;
+">
+  <div style="color:#ffff00;font-size:9px;letter-spacing:1px;margin-bottom:3px;">👾 VISITORS</div>
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flai-token.pages.dev&count_bg=%2300FF00&title_bg=%23000080&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"
+       alt="visitor counter"
+       style="height:18px;display:block;margin:0 auto 3px;"
+       onerror="this.style.display='none'" />
+  <div style="color:#c0c0c0;font-size:8px;letter-spacing:1px;">★ LAI TOKEN ★</div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-socials">
     <a href="https://twitter.com/LearnAI_LAI" target="_blank" title="Twitter / X">
       <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.258 5.63 5.906-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
     </a>
-    <a href="https://t.me/" target="_blank" title="
+    <a href="https://t.me/" target="_blank" title="Telegram">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M11.944 0A12 12 0 1 0 24 12 12 12 0 0 0 11.944 0zm5.29 7.857-2.01 9.48c-.148.666-.538.829-1.092.515l-3.018-2.223-1.456 1.4c-.16.16-.297.297-.609.297l.215-3.07 5.577-5.034c.242-.215-.054-.335-.373-.12L7.72 14.723l-2.98-.929c-.648-.204-.66-.648.135-.96l11.636-4.487c.54-.196 1.013.12.723.51z"/></svg>
+    </a>
+    <a href="https://discord.gg/dnqzEG5u" target="_blank" title="Discord">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+    </a>
+    <a href="https://pump.fun/coin/DgaQtZvWN8hf52H4pjsossbLqvQPFqM9ZpQxhS2fpump" target="_blank" title="Pump.fun">🚀</a>
+  </div>
+  <p style="margin:.5rem 0 0;font-size:.72rem;color:var(--muted);">
+    © 2026 LEARN A.I $LAI —
+    <a href="https://solscan.io/token/FEb3iGcsk5HVKwzugWWSGgEhmxsj2h2P7NMjxWGwBTc5" target="_blank" style="color:var(--accent);">FEb3iGcs…wBTc5</a>
+  </p>
+</footer>
+
+</body>
+</html>
