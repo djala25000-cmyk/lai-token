@@ -126,16 +126,24 @@ HÉBERGEMENT
 [✅] Clé GROQ configurée sur Cloudflare
 [✅] Chatbot i18n corrigé (typing/error/powered traduits selon la langue)
 [✅] Versionnage index.html mis en place (commentaire en haut du fichier)
+[✅] Footer corrigé (v1.3)
+[✅] Compteur visiteurs rétro flottant ajouté (v1.4)
 
 VERSIONS index.html
 --------------------
 v1.0 → version initiale déployée sur Cloudflare
 v1.1 → 2026-06-11 | fix chatbot i18n : textes "réflexion/erreur/propulsé" maintenant traduits
+v1.2 → 2026-06-11 | cleanup : suppression functions/chat.js (doublon inutile)
+v1.3 → 2026-06-11 | fix footer tronqué : completion liens Twitter/Telegram/Discord/Pump.fun + copyright
+v1.4 → 2026-06-15 | ajout compteur visiteurs flottant style rétro (hits.seeyoufarm.com)
+
+ÉTAPES COMPLÉTÉES ✅ (suite)
+-----------------------------
+[✅] Footer index.html corrigé (lien Telegram vide en attente de création du compte)
 
 ÉTAPES RESTANTES
 ----------------
-[ ] Corriger footer incomplet dans index.html (s'arrête en plein milieu du footer)
-[ ] Créer Telegram
+[ ] Créer Telegram (puis mettre à jour le lien https://t.me/ dans le footer)
 [ ] Publier posts Twitter régulièrement
 [ ] Partager sur Reddit : r/SolanaMemeCoins, r/CryptoMoonShots
 
@@ -145,4 +153,3 @@ Bug corrigé : 100B tokens avec 9 décimales = overflow u64 Solana
 Solution    : 6 décimales ✅
 Repo propre : git initialisé dans C:\Users\alexia\Desktop\projet json sol
 → Les fichiers sont maintenant à la racine du repo (plus de sous-dossiers)
-Footer index.html tronqué à la ligne 1680 (milieu du lien Telegram) — le navigateur l'accepte mais c'est à corriger
